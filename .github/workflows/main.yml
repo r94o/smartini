@@ -1,0 +1,33 @@
+name: Tests
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v2.4.2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3.1.1
+        
+    - run: npm install
+    - run: npm audit fix
+    
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.7.0
+        
+    - name: Setup and Run Cypress
+      uses: cypress-io/github-action@v2.9.7
+      with:
+        browser: chrome
+        headless: true
+        start: npm run start:test
+        
+    - run: npm run test
+    
+    - name: Codecov
+      uses: codecov/codecov-action@v3.1.0
+      
