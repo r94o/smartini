@@ -1,0 +1,22 @@
+{
+  "name": "cocktail-finder",
+  "version": "1.0.0",
+  "description": "Cocktail Maker",
+  "main": "write-json-object-to-file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r94o/cocktail-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r94o/cocktail-finder/issues"
+  },
+  "homepage": "https://github.com/r94o/cocktail-finder#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.4"
+  }
+}
