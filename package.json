@@ -4,7 +4,7 @@
   "description": "Cocktail Maker",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --passWithNoTests",
     "start:test": "",
     "lint": "eslint ."
   },
