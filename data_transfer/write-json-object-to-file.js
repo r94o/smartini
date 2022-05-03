@@ -1,10 +1,9 @@
-const fs = require('fs')
-const fetch = require("node-fetch");
-const baseUrl = 'https://www.thecocktaildb.com/api/json/v2/'
+const fs = require("fs");
+const fetch = require("cross-fetch");
+const baseUrl = "https://www.thecocktaildb.com/api/json/v2/";
 
-const apiKey = (process.env.API_KEY || "1");
-console.log(apiKey)
-
+const apiKey = process.env.API_KEY || "1";
+console.log(apiKey);
 
 // const jsonData = {
 //   "drinks": [
@@ -64,18 +63,75 @@ console.log(apiKey)
 //   ]
 // }
 
-fetch("www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=11007").then(response => writeData(response))
+// fetch("//api.github.com/users/lquixada")
+// fetch("thecocktaildb.com/api/json/v2/9973533")
+// fetch("http://www.thecocktaildb.com/api/json/v2/9973533")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 
-// const jsonObj = JSON.parse(jsonData);
-// console.log(jsonObj)
+const alphanumeric = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+];
 
-// const jsonContent = JSON.stringify(jsonData)
-// console.log(jsonContent)
+for (let letter of alphanumeric) {
+  fetch(
+    `https://www.thecocktaildb.com/api/json/v2/${apiKey}/search.php?` +
+      new URLSearchParams({
+        f: letter,
+      })
+  )
+    .then((response) => response.json())
+    .then((data) => JSON.stringify(data))
+    .then((content) => writeData(letter, content));
 
-const writeData = (data) => {fs.writeFile("output.json", data, 'utf8', function (err) {
-  if (err) {
-    console.log("tere was an error")
-    return console.log(err)
-  }
-  console.log("JSON file was saved");
-})}
+  // const jsonObj = JSON.parse(jsonData);
+  // console.log(jsonObj)
+
+  // const jsonContent = JSON.stringify(jsonData)
+  // console.log(jsonContent)
+
+  const writeData = (letter, data) => {
+    fs.writeFile(`output_${letter}.json`, data, "utf8", function (err) {
+      if (err) {
+        console.log("tere was an error");
+        return console.log(err);
+      }
+      console.log("JSON file was saved");
+    });
+  };
+}
