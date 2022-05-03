@@ -9,6 +9,7 @@ const AddIngredient = (props) => {
 
   const handleClick = () => {
     props.addIngredient(ingredientInput);
+    setIngredientInput("");
   }
 
   return (

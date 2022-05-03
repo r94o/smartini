@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AddIngredient from './components/AddIngredient';
 import { useState } from 'react'
@@ -11,13 +10,15 @@ function App() {
     setIngredients([ingredient, ...ingredients])
   }
 
+  const deleteIngredient = (deleteIndex) => {
+    const updatedIngredients = ingredients.filter((_, i) => i !== deleteIndex);
+    setIngredients(updatedIngredients);
+  }
+
   return (
     <div className="main-container">
       <AddIngredient addIngredient={addIngredient} />
-      <IngredientList ingredients={ingredients} />
-    
-    
-
+      <IngredientList ingredients={ingredients} deleteIngredient={deleteIngredient}/>
     </div>
   );
 }
