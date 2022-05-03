@@ -19,13 +19,6 @@ jobs:
     - name: Start MongoDB
       uses: supercharge/mongodb-github-action@1.7.0
         
-    - name: Setup and Run Cypress
-      uses: cypress-io/github-action@v2.9.7
-      with:
-        browser: chrome
-        headless: true
-        start: npm run start:test
-        
     - run: npm run test
     - run: npm run lint
     
