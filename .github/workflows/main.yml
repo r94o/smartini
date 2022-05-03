@@ -27,6 +27,7 @@ jobs:
         start: npm run start:test
         
     - run: npm run test
+    - run: npm run lint
     
     - name: Codecov
       uses: codecov/codecov-action@v3.1.0
