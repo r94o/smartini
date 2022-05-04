@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import AddIngredient from './components/AddIngredient';
+import { useState } from 'react'
+import IngredientList from './components/IngredientList';
+import CocktailList from './components/CocktailList';
 
 function App() {
+  const [ingredients, setIngredients] = useState([]);
+
+  const addIngredient = (ingredient) => {
+    setIngredients([ingredient, ...ingredients])
+  }
+
+  const deleteIngredient = (deleteIndex) => {
+    const updatedIngredients = ingredients.filter((_, i) => i !== deleteIndex);
+    setIngredients(updatedIngredients);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <AddIngredient addIngredient={addIngredient} />
+      <IngredientList ingredients={ingredients} deleteIngredient={deleteIngredient}/>
+      <CocktailList ingredients={ingredients} />
     </div>
   );
 }
