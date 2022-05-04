@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const DrinksController = require('../controllers/drinks');
 
@@ -6,6 +7,5 @@ const DrinksController = require('../controllers/drinks');
 router.get('/', DrinksController.Index);
 router.get('/:id', DrinksController.FilterByIdString);
 router.post('/', DrinksController.FilterByAllIngredientsAvailable);
-
 
 module.exports = router;

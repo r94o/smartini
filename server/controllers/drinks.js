@@ -6,8 +6,8 @@ const DrinksController = {
       if (err) {
         throw err;
       }
-      res.send({ drinks: drinks });
-    })
+      res.send({ drinks });
+    });
   },
   FilterByIdString: (req, res) => {
     Drink.findOne({ id: req.params.id }).then((drink) => {
@@ -16,20 +16,20 @@ const DrinksController = {
     });
   },
   FilterByIngredient: (req, res) => {
-    const ingredients = req.body.ingredients;
-    console.log("Contains Any:", ingredients);
+    const { ingredients } = req.body;
+    console.log('Contains Any:', ingredients);
     Drink.find({ ingredients: { $in: ingredients } }).then((drinks) => {
-      res.send({ drinks: drinks });
+      res.send({ drinks });
     });
   },
   FilterByAllIngredientsAvailable: (req, res) => {
     const queryIngredients = req.body.ingredients;
     Drink.find({
-      $expr: { $setIsSubset: ["$ingredients", queryIngredients] }
+      $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
     }).then((drinks) => {
-      res.json({ drinks: drinks });
-    })
-  }
-}
+      res.json({ drinks });
+    });
+  },
+};
 
 module.exports = DrinksController;
