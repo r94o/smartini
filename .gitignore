@@ -1,3 +1,4 @@
 node_modules
 coverage
 client/cypress/videos
+client/cypress/screenshots
