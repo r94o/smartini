@@ -4,7 +4,7 @@ const CocktailList = (props) => {
   const [cocktails, setCocktails] = useState([]) 
 
   useEffect(() => {
-      fetch("https://862840e1-6fa8-4a2d-a874-15705d2f04cb.mock.pstmn.io/post", {
+      fetch("", {
         method: "POST",
         body: JSON.stringify({
           ingredients: props.ingredients

@@ -13,13 +13,13 @@ const AddIngredient = (props) => {
     setIngredientInput("");
   }
 
-  const handleKeyPress = (event) => {
+  const handleKeyDown = (event) => {
     if (event.charCode === 13) handleClick();
   }
 
   return (
     <div className="add-ingredient-container">
-      <input type="text" id="ingredient-input" onChange={handleChange} onKeyPress={handleKeyPress} value={ingredientInput} placeholder="Enter Ingredient" />
+      <input type="text" id="ingredient-input" onChange={handleChange} onKeyDown={handleKeyDown} value={ingredientInput} placeholder="Enter Ingredient" />
       <button onClick={handleClick} id="add-ingredient">Add</button>
     </div>
   )

@@ -1,5 +1,5 @@
 describe("Adding an ingredient and getting a recommendation", () => {
-  it("suggests a martini", () => {
+  xit("suggests a martini", () => {
     cy.visit("/")
     cy.get("#ingredient-input").type("Gin")
     cy.get("#add-ingredient").click()

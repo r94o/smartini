@@ -5,7 +5,7 @@ import IngredientList from './components/IngredientList';
 import CocktailList from './components/CocktailList';
 
 function App() {
-  const [ingredients, setIngredients] = useState(["Vodka", "Gin", "Olive", "Dry Vermouth", "Cointreau", "Coca-Cola", "Lime" ]);
+  const [ingredients, setIngredients] = useState([]);
 
   const addIngredient = (ingredient) => {
     setIngredients([ingredient, ...ingredients])
