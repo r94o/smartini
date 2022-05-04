@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test:unit": "jest --coverage --passWithNoTests",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "server": "json-server --watch db.json --port 5000"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,9 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "jest": "^28.0.3"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "json-server": "^0.17.0"
   }
 }
