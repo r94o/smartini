@@ -1,5 +1,4 @@
-{
-  "drinks": [
+[
     {
       "id": "17222",
       "ingredients": [
@@ -17000,5 +16999,4 @@
       "strCreativeCommonsConfirmed": "No",
       "dateModified": "2016-08-31 19:48:22"
     }
-  ]
-}
+]
