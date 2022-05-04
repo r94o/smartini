@@ -1,28 +1,21 @@
 {
   "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test:unit": "jest --coverage --passWithNoTests",
-    "lint": "npx eslint .",
-    "server": "json-server --watch db.json --port 5000"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.14.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "jest": "^28.0.3"
+    "start": "node ./bin/www"
   },
   "dependencies": {
+    "cookie-parser": "~1.4.4",
     "cross-fetch": "^3.1.5",
-    "json-server": "^0.17.0"
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "mongoose": "^6.3.2",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
