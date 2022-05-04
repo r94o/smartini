@@ -11,7 +11,7 @@ describe("Index Page", () => {
     cy.visit("/")
     cy.get("#ingredient-list>table>tbody").should("exist").and("be.empty")
   })
-  it("can see 'your recommendations' table", () => {
+  xit("can see 'your recommendations' table", () => {
     cy.visit("/")
     cy.get("#cocktail-recommendation-list>table>tbody").should("exist").and("be.empty")
   })
