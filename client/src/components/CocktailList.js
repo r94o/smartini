@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 
-const CocktailList = (props) => {
+const CocktailList = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3001/drinks", {
       method: "POST",
       body: JSON.stringify({
-        ingredients: props.ingredients
+        ingredients
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
@@ -15,7 +15,7 @@ const CocktailList = (props) => {
     })
       .then(response => response.json())
       .then(({ drinks }) => setCocktails(drinks));
-  }, [props.ingredients]);
+  }, [ingredients]);
 
   return (
     <div id="cocktail-list">

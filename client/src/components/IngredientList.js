@@ -1,16 +1,16 @@
 
-const IngredientList = (props) => {
+const IngredientList = ({ deleteIngredient, ingredients }) => {
 
   const handleClick = (event) => {
     const elementIndex = parseInt(event.target.dataset.index)
-    props.deleteIngredient(elementIndex);
+    deleteIngredient(elementIndex);
   }
 
   return (
     <div id="ingredient-list">
       <table>
        <tbody>
-        {props.ingredients.map((ingredient, i) =>
+        {ingredients.map((ingredient, i) =>
           <tr key={i}>
             <td>{ingredient}</td>
             <td><button data-index={i} onClick={handleClick}>Delete</button></td>
