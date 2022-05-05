@@ -7,9 +7,9 @@ const apiKey = process.env.API_KEY || '1';
 
 /* eslint-disable */
 const writeData = (data) => {
-  fs.writeFile('db.json', data, 'utf8', (err) => {
+  fs.writeFile('drinks.json', data, 'utf8', (err) => {
     if (err) {
-      console.log('tere was an error');
+      console.log('There was an error');
       return console.log(err);
     }
     return console.log('JSON file was saved');
@@ -21,7 +21,7 @@ const stringsToArray = (...strings) => strings.filter((string) => string != null
 
 const restructureDrinkObjects = (drinks) => drinks.map(
   (drink) => {
-    const ingredients = stringsToArray(
+    let ingredients = stringsToArray(
       drink.strIngredient1,
       drink.strIngredient2,
       drink.strIngredient3,
@@ -38,7 +38,8 @@ const restructureDrinkObjects = (drinks) => drinks.map(
       drink.strIngredient14,
       drink.strIngredient15,
     );
-    const measures = stringsToArray(
+    ingredients = ingredients.map(ingredient => ingredient.toLowerCase());
+    let measures = stringsToArray(
       drink.strMeasure1,
       drink.strMeasure2,
       drink.strMeasure3,
@@ -55,6 +56,7 @@ const restructureDrinkObjects = (drinks) => drinks.map(
       drink.strMeasure14,
       drink.strMeasure15,
     );
+    measures = measures.map(measure => measure.toLowerCase());
     return {
       id: drink.idDrink,
       ingredients,
