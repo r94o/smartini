@@ -23,7 +23,7 @@ const CocktailList = ({ ingredients }) => {
         <tbody>
           {cocktails.map((cocktail, i) =>
             <tr key={i}>
-              <td><img src={cocktail.strDrinkThumb} alt="cocktail" width="200" height="200"></img>{cocktail.strDrink}</td>
+              <td><img src={cocktail.image} alt="cocktail" width="200" height="200"></img>{cocktail.displayName}</td>
             </tr>
           )}
         </tbody>
