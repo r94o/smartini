@@ -13,6 +13,6 @@ describe("Index Page", () => {
   })
   xit("can see 'your recommendations' table", () => {
     cy.visit("/")
-    cy.get("#cocktail-recommendation-list>table>tbody").should("exist").and("be.empty")
+    cy.get("#cocktail-list>table>tbody").should("exist").and("be.empty")
   })
 })
