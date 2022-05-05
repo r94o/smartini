@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddIngredient = (props) => {
+const AddIngredient = ({ addIngredient }) => {
   const [ingredientInput, setIngredientInput] = useState("")
 
   const handleChange = (event) => {
@@ -9,12 +9,13 @@ const AddIngredient = (props) => {
 
   const handleClick = () => {
     if (!ingredientInput) return;
-    props.addIngredient(ingredientInput);
+    addIngredient(ingredientInput);
     setIngredientInput("");
   }
 
   const handleKeyDown = (event) => {
-    if (event.charCode === 13) handleClick();
+    const enterKeyCode = 13;
+    if (event.keyCode === enterKeyCode) handleClick();
   }
 
   return (
