@@ -23,7 +23,7 @@ const DrinksController = {
     });
   },
   FilterByAllIngredientsAvailable: (req, res) => {
-    const queryIngredients = req.body.ingredients;
+    const queryIngredients = req.body.ingredients.map(ingredient => ingredient.toLowerCase());
     Drink.find({
       $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
     }).then((drinks) => {
