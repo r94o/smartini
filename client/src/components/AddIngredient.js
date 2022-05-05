@@ -13,16 +13,21 @@ const AddIngredient = ({ addIngredient }) => {
   }, []);
   
   const handleChange = (event) => {
-    setSelectionIndex(0)
-    setIngredientInput(event.target.value)
-    if (event.target.value.length < 2) {
-      setMatchingIngredients([])
-    } else {
-    const filter = allIngredients.filter(ingredient => {
-      return ingredient.name.includes(event.target.value)
+
+    const input = event.target.value
+    setIngredientInput(input)
+
+    if (input.length < 2) {
+      setMatchingIngredients([]);
+      return;
+    }
+
+    const filteredIngredients = allIngredients.filter(ingredient => {
+      return ingredient.name.includes(input);
     })
-    setMatchingIngredients(filter)
-  }}
+    setMatchingIngredients(filteredIngredients);
+    setSelectionIndex(0);
+  }
 
   const handleEnter = (selectionIndex) => {
     if (!ingredientInput) return;
@@ -45,13 +50,13 @@ const AddIngredient = ({ addIngredient }) => {
   }
 
   const handleKeyDown = (event) => {
-    const enterKeyCode = 13;
-    const downKeyCode = 40;
-    const upKeyCode = 38;
+    console.log(event)
+    const [enterKeyCode, downKeyCode, upKeyCode] = [13, 40, 38];
     if (event.keyCode === enterKeyCode) handleEnter(selectionIndex);
     if (event.keyCode === downKeyCode) setSelectionIndex(selectionIndex + 1);
     if (event.keyCode === upKeyCode) setSelectionIndex(selectionIndex - 1);
-    document.querySelector(".active").scrollIntoView({ behavior: 'smooth', block: 'center' })
+    const selection = document.querySelector(".active");
+    if (selection) selection.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   
   return (
