@@ -12,8 +12,8 @@ const AddIngredient = ({ addIngredient }) => {
       .then(( ingredients ) => setAllIngredients(ingredients));
   }, []);
   
-
   const handleChange = (event) => {
+    setSelectionIndex(0)
     setIngredientInput(event.target.value)
     if (event.target.value.length < 2) {
       setMatchingIngredients([])
@@ -24,10 +24,21 @@ const AddIngredient = ({ addIngredient }) => {
     setMatchingIngredients(filter)
   }}
 
-  const handleClick = (selectionIndex) => {
+  const handleEnter = (selectionIndex) => {
     if (!ingredientInput) return;
     const ingredientName = matchingIngredients[selectionIndex].name
     addIngredient(ingredientName);
+    resetState();
+  }
+
+  const handleClick = (event) => {
+    if (!ingredientInput) return;
+    const ingredientName = event.target.innerHTML
+    addIngredient(ingredientName);
+    resetState()
+  }
+
+  const resetState = () => {
     setIngredientInput("");
     setMatchingIngredients([]);
     setSelectionIndex(0)
@@ -37,23 +48,22 @@ const AddIngredient = ({ addIngredient }) => {
     const enterKeyCode = 13;
     const downKeyCode = 40;
     const upKeyCode = 38;
-    if (event.keyCode === enterKeyCode) handleClick(selectionIndex);
+    if (event.keyCode === enterKeyCode) handleEnter(selectionIndex);
     if (event.keyCode === downKeyCode) setSelectionIndex(selectionIndex + 1);
     if (event.keyCode === upKeyCode) setSelectionIndex(selectionIndex - 1);
-    document.getElementsByClassName("active")[0].focus()
-
+    document.querySelector(".active").scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-
+  
   return (
     <div className="add-ingredient-container">
-      <input type="text" id="ingredient-input" onChange={handleChange} onKeyDown={handleKeyDown} value={ingredientInput} placeholder="Enter Ingredient" />
+      <input type="search" id="ingredient-input" onChange={handleChange} onKeyDown={handleKeyDown} value={ingredientInput} placeholder="Enter Ingredient" />
       <ul className="matching-ingredients-list">
         {matchingIngredients.map((ingredient, i) => {
           let activeClassName
           if (i === selectionIndex) {
             activeClassName = "active"
           }
-          return (<li key={i} onClick={handleClick} className={activeClassName} tabIndex="-1">{ingredient.name}</li>)
+          return (<li key={i} onClick={handleClick} className={activeClassName}>{ingredient.name}</li>)
         })}
       </ul>
     </div>
