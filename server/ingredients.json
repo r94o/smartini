@@ -1,0 +1,1466 @@
+[
+  {
+    "name": "Vodka"
+  },
+  {
+    "name": "Gin"
+  },
+  {
+    "name": "Rum"
+  },
+  {
+    "name": "Tequila"
+  },
+  {
+    "name": "Scotch"
+  },
+  {
+    "name": "Absolut Kurant"
+  },
+  {
+    "name": "Absolut Peppar"
+  },
+  {
+    "name": "Absolut Vodka"
+  },
+  {
+    "name": "Advocaat"
+  },
+  {
+    "name": "Aejo Rum"
+  },
+  {
+    "name": "Aftershock"
+  },
+  {
+    "name": "Agave Syrup"
+  },
+  {
+    "name": "Ale"
+  },
+  {
+    "name": "Allspice"
+  },
+  {
+    "name": "Almond Flavoring"
+  },
+  {
+    "name": "Almond"
+  },
+  {
+    "name": "Amaretto"
+  },
+  {
+    "name": "Angelica Root"
+  },
+  {
+    "name": "Angostura Bitters"
+  },
+  {
+    "name": "Anis"
+  },
+  {
+    "name": "Anise"
+  },
+  {
+    "name": "Anisette"
+  },
+  {
+    "name": "Aperol"
+  },
+  {
+    "name": "Apfelkorn"
+  },
+  {
+    "name": "Apple Brandy"
+  },
+  {
+    "name": "Apple Cider"
+  },
+  {
+    "name": "Apple Juice"
+  },
+  {
+    "name": "Apple Schnapps"
+  },
+  {
+    "name": "Apple"
+  },
+  {
+    "name": "Applejack"
+  },
+  {
+    "name": "Apricot Brandy"
+  },
+  {
+    "name": "Apricot Nectar"
+  },
+  {
+    "name": "Apricot"
+  },
+  {
+    "name": "Aquavit"
+  },
+  {
+    "name": "Asafoetida"
+  },
+  {
+    "name": "Añejo Rum"
+  },
+  {
+    "name": "Bacardi Limon"
+  },
+  {
+    "name": "Bacardi"
+  },
+  {
+    "name": "Baileys Irish Cream"
+  },
+  {
+    "name": "Banana Liqueur"
+  },
+  {
+    "name": "Banana Rum"
+  },
+  {
+    "name": "Banana Syrup"
+  },
+  {
+    "name": "Banana"
+  },
+  {
+    "name": "Barenjager"
+  },
+  {
+    "name": "Basil"
+  },
+  {
+    "name": "Beef Stock"
+  },
+  {
+    "name": "Beer"
+  },
+  {
+    "name": "Benedictine"
+  },
+  {
+    "name": "Berries"
+  },
+  {
+    "name": "Bitter lemon"
+  },
+  {
+    "name": "Bitters"
+  },
+  {
+    "name": "Black Pepper"
+  },
+  {
+    "name": "Black Rum"
+  },
+  {
+    "name": "Black Sambuca"
+  },
+  {
+    "name": "Blackberries"
+  },
+  {
+    "name": "Blackberry Brandy"
+  },
+  {
+    "name": "Blackberry Schnapps"
+  },
+  {
+    "name": "Blackcurrant Cordial"
+  },
+  {
+    "name": "Blackcurrant Schnapps"
+  },
+  {
+    "name": "Blackcurrant Squash"
+  },
+  {
+    "name": "Blended Whiskey"
+  },
+  {
+    "name": "Blue Curacao"
+  },
+  {
+    "name": "Blue Maui"
+  },
+  {
+    "name": "Blueberries"
+  },
+  {
+    "name": "Blueberry Schnapps"
+  },
+  {
+    "name": "Bourbon"
+  },
+  {
+    "name": "Brandy"
+  },
+  {
+    "name": "Brown Sugar"
+  },
+  {
+    "name": "Butter"
+  },
+  {
+    "name": "Butterscotch Schnapps"
+  },
+  {
+    "name": "Cachaca"
+  },
+  {
+    "name": "Calvados"
+  },
+  {
+    "name": "Campari"
+  },
+  {
+    "name": "Canadian Whisky"
+  },
+  {
+    "name": "Candy"
+  },
+  {
+    "name": "Cantaloupe"
+  },
+  {
+    "name": "Caramel Coloring"
+  },
+  {
+    "name": "Carbonated Soft Drink"
+  },
+  {
+    "name": "Carbonated Water"
+  },
+  {
+    "name": "Cardamom"
+  },
+  {
+    "name": "Cayenne Pepper"
+  },
+  {
+    "name": "Celery Salt"
+  },
+  {
+    "name": "Celery"
+  },
+  {
+    "name": "Chambord Raspberry Liqueur"
+  },
+  {
+    "name": "Champagne"
+  },
+  {
+    "name": "Cherries"
+  },
+  {
+    "name": "Cherry Brandy"
+  },
+  {
+    "name": "Cherry Cola"
+  },
+  {
+    "name": "Cherry Grenadine"
+  },
+  {
+    "name": "Cherry Heering"
+  },
+  {
+    "name": "Cherry Juice"
+  },
+  {
+    "name": "Cherry Liqueur"
+  },
+  {
+    "name": "Cherry"
+  },
+  {
+    "name": "Chocolate Ice-cream"
+  },
+  {
+    "name": "Chocolate Liqueur"
+  },
+  {
+    "name": "Chocolate Milk"
+  },
+  {
+    "name": "Chocolate Syrup"
+  },
+  {
+    "name": "Chocolate"
+  },
+  {
+    "name": "Cider"
+  },
+  {
+    "name": "Cinnamon Schnapps"
+  },
+  {
+    "name": "Cinnamon"
+  },
+  {
+    "name": "Citrus Vodka"
+  },
+  {
+    "name": "Clamato Juice"
+  },
+  {
+    "name": "Cloves"
+  },
+  {
+    "name": "Club Soda"
+  },
+  {
+    "name": "Coca-Cola"
+  },
+  {
+    "name": "Cocktail Onion"
+  },
+  {
+    "name": "Cocoa Powder"
+  },
+  {
+    "name": "Coconut Cream"
+  },
+  {
+    "name": "Coconut Liqueur"
+  },
+  {
+    "name": "Coconut Milk"
+  },
+  {
+    "name": "Coconut Rum"
+  },
+  {
+    "name": "Coconut Syrup"
+  },
+  {
+    "name": "Coffee Brandy"
+  },
+  {
+    "name": "Coffee Liqueur"
+  },
+  {
+    "name": "Coffee"
+  },
+  {
+    "name": "Cognac"
+  },
+  {
+    "name": "Cointreau"
+  },
+  {
+    "name": "Cola"
+  },
+  {
+    "name": "Cold Water"
+  },
+  {
+    "name": "Condensed Milk"
+  },
+  {
+    "name": "Coriander"
+  },
+  {
+    "name": "Corn Syrup"
+  },
+  {
+    "name": "Cornstarch"
+  },
+  {
+    "name": "Corona"
+  },
+  {
+    "name": "Cranberries"
+  },
+  {
+    "name": "Cranberry Juice"
+  },
+  {
+    "name": "Cranberry Liqueur"
+  },
+  {
+    "name": "Cranberry Vodka"
+  },
+  {
+    "name": "Cream of Coconut"
+  },
+  {
+    "name": "Cream Sherry"
+  },
+  {
+    "name": "Cream Soda"
+  },
+  {
+    "name": "Cream"
+  },
+  {
+    "name": "Creme De Almond"
+  },
+  {
+    "name": "Creme De Banane"
+  },
+  {
+    "name": "Creme De Cacao"
+  },
+  {
+    "name": "Creme De Cassis"
+  },
+  {
+    "name": "Creme De Noyaux"
+  },
+  {
+    "name": "Creme Fraiche"
+  },
+  {
+    "name": "Crown Royal"
+  },
+  {
+    "name": "Crystal Light"
+  },
+  {
+    "name": "Cucumber"
+  },
+  {
+    "name": "Cumin Powder"
+  },
+  {
+    "name": "Cumin Seed"
+  },
+  {
+    "name": "Curacao"
+  },
+  {
+    "name": "Cynar"
+  },
+  {
+    "name": "Daiquiri Mix"
+  },
+  {
+    "name": "Dark Chocolate"
+  },
+  {
+    "name": "Dark Creme De Cacao"
+  },
+  {
+    "name": "Dark Rum"
+  },
+  {
+    "name": "Dark Soy Sauce"
+  },
+  {
+    "name": "Demerara Sugar"
+  },
+  {
+    "name": "Dr. Pepper"
+  },
+  {
+    "name": "Drambuie"
+  },
+  {
+    "name": "Dried Oregano"
+  },
+  {
+    "name": "Dry Vermouth"
+  },
+  {
+    "name": "Dubonnet Blanc"
+  },
+  {
+    "name": "Dubonnet Rouge"
+  },
+  {
+    "name": "Egg White"
+  },
+  {
+    "name": "Egg Yolk"
+  },
+  {
+    "name": "Egg"
+  },
+  {
+    "name": "Eggnog"
+  },
+  {
+    "name": "Erin Cream"
+  },
+  {
+    "name": "Espresso"
+  },
+  {
+    "name": "Everclear"
+  },
+  {
+    "name": "Fanta"
+  },
+  {
+    "name": "Fennel Seeds"
+  },
+  {
+    "name": "Firewater"
+  },
+  {
+    "name": "Flaked Almonds"
+  },
+  {
+    "name": "Food Coloring"
+  },
+  {
+    "name": "Forbidden Fruit"
+  },
+  {
+    "name": "Frangelico"
+  },
+  {
+    "name": "Fresca"
+  },
+  {
+    "name": "Fresh Basil"
+  },
+  {
+    "name": "Fresh Lemon Juice"
+  },
+  {
+    "name": "Fruit Juice"
+  },
+  {
+    "name": "Fruit Punch"
+  },
+  {
+    "name": "Fruit"
+  },
+  {
+    "name": "Galliano"
+  },
+  {
+    "name": "Garlic Sauce"
+  },
+  {
+    "name": "Gatorade"
+  },
+  {
+    "name": "Ginger Ale"
+  },
+  {
+    "name": "Ginger Beer"
+  },
+  {
+    "name": "Ginger"
+  },
+  {
+    "name": "Glycerine"
+  },
+  {
+    "name": "Godiva Liqueur"
+  },
+  {
+    "name": "Gold rum"
+  },
+  {
+    "name": "Gold Tequila"
+  },
+  {
+    "name": "Goldschlager"
+  },
+  {
+    "name": "Grain Alcohol"
+  },
+  {
+    "name": "Grand Marnier"
+  },
+  {
+    "name": "Granulated Sugar"
+  },
+  {
+    "name": "Grape juice"
+  },
+  {
+    "name": "Grape soda"
+  },
+  {
+    "name": "Grapefruit Juice"
+  },
+  {
+    "name": "Grapes"
+  },
+  {
+    "name": "Green Chartreuse"
+  },
+  {
+    "name": "Green Creme de Menthe"
+  },
+  {
+    "name": "Green Ginger Wine"
+  },
+  {
+    "name": "Green Olives"
+  },
+  {
+    "name": "Grenadine"
+  },
+  {
+    "name": "Ground Ginger"
+  },
+  {
+    "name": "Guava juice"
+  },
+  {
+    "name": "Guinness stout"
+  },
+  {
+    "name": "Guinness"
+  },
+  {
+    "name": "Half-and-half"
+  },
+  {
+    "name": "Hawaiian punch"
+  },
+  {
+    "name": "Hazelnut liqueur"
+  },
+  {
+    "name": "Heavy cream"
+  },
+  {
+    "name": "Honey"
+  },
+  {
+    "name": "Hooch"
+  },
+  {
+    "name": "Hot Chocolate"
+  },
+  {
+    "name": "Hot Damn"
+  },
+  {
+    "name": "Hot Sauce"
+  },
+  {
+    "name": "Hpnotiq"
+  },
+  {
+    "name": "Ice-Cream"
+  },
+  {
+    "name": "Ice"
+  },
+  {
+    "name": "Iced tea"
+  },
+  {
+    "name": "Irish cream"
+  },
+  {
+    "name": "Irish Whiskey"
+  },
+  {
+    "name": "Jack Daniels"
+  },
+  {
+    "name": "Jello"
+  },
+  {
+    "name": "Jelly"
+  },
+  {
+    "name": "Jagermeister"
+  },
+  {
+    "name": "Jim Beam"
+  },
+  {
+    "name": "Johnnie Walker"
+  },
+  {
+    "name": "Kahlua"
+  },
+  {
+    "name": "Key Largo Schnapps"
+  },
+  {
+    "name": "Kirschwasser"
+  },
+  {
+    "name": "Kiwi liqueur"
+  },
+  {
+    "name": "Kiwi"
+  },
+  {
+    "name": "Kool-Aid"
+  },
+  {
+    "name": "Kummel"
+  },
+  {
+    "name": "Lager"
+  },
+  {
+    "name": "Lemon Juice"
+  },
+  {
+    "name": "Lemon Peel"
+  },
+  {
+    "name": "Lemon soda"
+  },
+  {
+    "name": "Lemon vodka"
+  },
+  {
+    "name": "Lemon-lime soda"
+  },
+  {
+    "name": "lemon-lime"
+  },
+  {
+    "name": "lemon"
+  },
+  {
+    "name": "Lemonade"
+  },
+  {
+    "name": "Licorice Root"
+  },
+  {
+    "name": "Light Cream"
+  },
+  {
+    "name": "Light Rum"
+  },
+  {
+    "name": "Lillet"
+  },
+  {
+    "name": "Lime juice cordial"
+  },
+  {
+    "name": "Lime Juice"
+  },
+  {
+    "name": "Lime liqueur"
+  },
+  {
+    "name": "Lime Peel"
+  },
+  {
+    "name": "Lime vodka"
+  },
+  {
+    "name": "Lime"
+  },
+  {
+    "name": "Limeade"
+  },
+  {
+    "name": "Madeira"
+  },
+  {
+    "name": "Malibu Rum"
+  },
+  {
+    "name": "Mandarin"
+  },
+  {
+    "name": "Mandarine napoleon"
+  },
+  {
+    "name": "Mango"
+  },
+  {
+    "name": "Maple syrup"
+  },
+  {
+    "name": "Maraschino cherry juice"
+  },
+  {
+    "name": "Maraschino Cherry"
+  },
+  {
+    "name": "Maraschino Liqueur"
+  },
+  {
+    "name": "Margarita mix"
+  },
+  {
+    "name": "Marjoram leaves"
+  },
+  {
+    "name": "Marshmallows"
+  },
+  {
+    "name": "Maui"
+  },
+  {
+    "name": "Melon Liqueur"
+  },
+  {
+    "name": "Melon Vodka"
+  },
+  {
+    "name": "Mezcal"
+  },
+  {
+    "name": "Midori Melon Liqueur"
+  },
+  {
+    "name": "Midori"
+  },
+  {
+    "name": "Milk"
+  },
+  {
+    "name": "Mint syrup"
+  },
+  {
+    "name": "Mint"
+  },
+  {
+    "name": "Mountain Dew"
+  },
+  {
+    "name": "Nutmeg"
+  },
+  {
+    "name": "Olive Oil"
+  },
+  {
+    "name": "Olive"
+  },
+  {
+    "name": "Onion"
+  },
+  {
+    "name": "Orange Bitters"
+  },
+  {
+    "name": "Orange Curacao"
+  },
+  {
+    "name": "Orange Juice"
+  },
+  {
+    "name": "Orange liqueur"
+  },
+  {
+    "name": "Orange Peel"
+  },
+  {
+    "name": "Orange rum"
+  },
+  {
+    "name": "Orange Soda"
+  },
+  {
+    "name": "Orange spiral"
+  },
+  {
+    "name": "Orange vodka"
+  },
+  {
+    "name": "Orange"
+  },
+  {
+    "name": "Oreo cookie"
+  },
+  {
+    "name": "Orgeat Syrup"
+  },
+  {
+    "name": "Ouzo"
+  },
+  {
+    "name": "Oyster Sauce"
+  },
+  {
+    "name": "Papaya juice"
+  },
+  {
+    "name": "Papaya"
+  },
+  {
+    "name": "Parfait amour"
+  },
+  {
+    "name": "Passion fruit juice"
+  },
+  {
+    "name": "Passion fruit syrup"
+  },
+  {
+    "name": "Passoa"
+  },
+  {
+    "name": "Peach brandy"
+  },
+  {
+    "name": "Peach juice"
+  },
+  {
+    "name": "Peach liqueur"
+  },
+  {
+    "name": "Peach Nectar"
+  },
+  {
+    "name": "Peach Schnapps"
+  },
+  {
+    "name": "Peach Vodka"
+  },
+  {
+    "name": "Peach"
+  },
+  {
+    "name": "Peachtree schnapps"
+  },
+  {
+    "name": "Peanut Oil"
+  },
+  {
+    "name": "Pepper"
+  },
+  {
+    "name": "Peppermint extract"
+  },
+  {
+    "name": "Peppermint Schnapps"
+  },
+  {
+    "name": "Pepsi Cola"
+  },
+  {
+    "name": "Pernod"
+  },
+  {
+    "name": "Peychaud bitters"
+  },
+  {
+    "name": "Pina colada mix"
+  },
+  {
+    "name": "Pineapple Juice"
+  },
+  {
+    "name": "Pineapple rum"
+  },
+  {
+    "name": "Pineapple vodka"
+  },
+  {
+    "name": "Pineapple-orange-banana juice"
+  },
+  {
+    "name": "Pineapple"
+  },
+  {
+    "name": "Pink lemonade"
+  },
+  {
+    "name": "Pisang Ambon"
+  },
+  {
+    "name": "Pisco"
+  },
+  {
+    "name": "Plain Chocolate"
+  },
+  {
+    "name": "Plain Flour"
+  },
+  {
+    "name": "Plums"
+  },
+  {
+    "name": "Port"
+  },
+  {
+    "name": "Powdered Sugar"
+  },
+  {
+    "name": "Purple passion"
+  },
+  {
+    "name": "Raisins"
+  },
+  {
+    "name": "Raspberry cordial"
+  },
+  {
+    "name": "Raspberry Jam"
+  },
+  {
+    "name": "Raspberry Juice"
+  },
+  {
+    "name": "Raspberry Liqueur"
+  },
+  {
+    "name": "Raspberry schnapps"
+  },
+  {
+    "name": "Raspberry syrup"
+  },
+  {
+    "name": "Raspberry Vodka"
+  },
+  {
+    "name": "Red Chile Flakes"
+  },
+  {
+    "name": "Red Chili Flakes"
+  },
+  {
+    "name": "Red Hot Chili Flakes"
+  },
+  {
+    "name": "Red Wine"
+  },
+  {
+    "name": "Rhubarb"
+  },
+  {
+    "name": "Ricard"
+  },
+  {
+    "name": "Rock Salt"
+  },
+  {
+    "name": "Root beer schnapps"
+  },
+  {
+    "name": "Root beer"
+  },
+  {
+    "name": "Roses sweetened lime juice"
+  },
+  {
+    "name": "Rosewater"
+  },
+  {
+    "name": "Rumple Minze"
+  },
+  {
+    "name": "Rye Whiskey"
+  },
+  {
+    "name": "Sake"
+  },
+  {
+    "name": "Salt"
+  },
+  {
+    "name": "Sambuca"
+  },
+  {
+    "name": "Sarsaparilla"
+  },
+  {
+    "name": "Schnapps"
+  },
+  {
+    "name": "Schweppes Lemon"
+  },
+  {
+    "name": "Schweppes Russchian"
+  },
+  {
+    "name": "Sherbet"
+  },
+  {
+    "name": "Sherry"
+  },
+  {
+    "name": "Sirup of roses"
+  },
+  {
+    "name": "Sloe Gin"
+  },
+  {
+    "name": "Soda Water"
+  },
+  {
+    "name": "Sour Apple Pucker"
+  },
+  {
+    "name": "Sour Mix"
+  },
+  {
+    "name": "Southern Comfort"
+  },
+  {
+    "name": "Soy Milk"
+  },
+  {
+    "name": "Soy Sauce"
+  },
+  {
+    "name": "Soya Milk"
+  },
+  {
+    "name": "Soya Sauce"
+  },
+  {
+    "name": "Spiced Rum"
+  },
+  {
+    "name": "Sprite"
+  },
+  {
+    "name": "Squeezed Orange"
+  },
+  {
+    "name": "Squirt"
+  },
+  {
+    "name": "Strawberries"
+  },
+  {
+    "name": "Strawberry juice"
+  },
+  {
+    "name": "Strawberry liqueur"
+  },
+  {
+    "name": "Strawberry Schnapps"
+  },
+  {
+    "name": "Strawberry syrup"
+  },
+  {
+    "name": "Sugar Syrup"
+  },
+  {
+    "name": "Sugar"
+  },
+  {
+    "name": "Sunny delight"
+  },
+  {
+    "name": "Surge"
+  },
+  {
+    "name": "Swedish punsch"
+  },
+  {
+    "name": "Sweet and Sour"
+  },
+  {
+    "name": "Sweet Cream"
+  },
+  {
+    "name": "Sweet Vermouth"
+  },
+  {
+    "name": "Tabasco Sauce"
+  },
+  {
+    "name": "Tang"
+  },
+  {
+    "name": "Tawny port"
+  },
+  {
+    "name": "Tea"
+  },
+  {
+    "name": "Tennessee whiskey"
+  },
+  {
+    "name": "Tequila rose"
+  },
+  {
+    "name": "Tia Maria"
+  },
+  {
+    "name": "Tomato Juice"
+  },
+  {
+    "name": "Tomato"
+  },
+  {
+    "name": "Tonic Water"
+  },
+  {
+    "name": "Triple Sec"
+  },
+  {
+    "name": "Tropicana"
+  },
+  {
+    "name": "Tuaca"
+  },
+  {
+    "name": "Vanilla extract"
+  },
+  {
+    "name": "Vanilla Ice-Cream"
+  },
+  {
+    "name": "Vanilla liqueur"
+  },
+  {
+    "name": "Vanilla schnapps"
+  },
+  {
+    "name": "Vanilla syrup"
+  },
+  {
+    "name": "Vanilla vodka"
+  },
+  {
+    "name": "Vanilla"
+  },
+  {
+    "name": "Vermouth"
+  },
+  {
+    "name": "Vinegar"
+  },
+  {
+    "name": "Water"
+  },
+  {
+    "name": "Watermelon schnapps"
+  },
+  {
+    "name": "Whipped Cream"
+  },
+  {
+    "name": "Whipping Cream"
+  },
+  {
+    "name": "White chocolate liqueur"
+  },
+  {
+    "name": "White Creme de Menthe"
+  },
+  {
+    "name": "White grape juice"
+  },
+  {
+    "name": "White port"
+  },
+  {
+    "name": "White Rum"
+  },
+  {
+    "name": "White Vinegar"
+  },
+  {
+    "name": "White Wine"
+  },
+  {
+    "name": "Wild Turkey"
+  },
+  {
+    "name": "Wildberry schnapps"
+  },
+  {
+    "name": "Wine"
+  },
+  {
+    "name": "Worcestershire Sauce"
+  },
+  {
+    "name": "Wormwood"
+  },
+  {
+    "name": "Yeast"
+  },
+  {
+    "name": "Yellow Chartreuse"
+  },
+  {
+    "name": "Yoghurt"
+  },
+  {
+    "name": "Yukon Jack"
+  },
+  {
+    "name": "Zima"
+  },
+  {
+    "name": "Caramel Sauce"
+  },
+  {
+    "name": "Chocolate Sauce"
+  },
+  {
+    "name": "Lillet Blanc"
+  },
+  {
+    "name": "Peach Bitters"
+  },
+  {
+    "name": "Mini-snickers bars"
+  },
+  {
+    "name": "Prosecco"
+  },
+  {
+    "name": "Salted Chocolate"
+  },
+  {
+    "name": "Martini Rosso"
+  },
+  {
+    "name": "Martini Bianco"
+  },
+  {
+    "name": "Martini Extra Dry"
+  },
+  {
+    "name": "Fresh Lime Juice"
+  },
+  {
+    "name": "Fresh Mint"
+  },
+  {
+    "name": "Rosemary"
+  },
+  {
+    "name": "Habanero Peppers"
+  },
+  {
+    "name": "Ilegal Joven mezcal"
+  },
+  {
+    "name": "Elderflower cordial"
+  },
+  {
+    "name": "Rosso Vermouth"
+  },
+  {
+    "name": "Creme de Violette"
+  },
+  {
+    "name": "Cocchi Americano"
+  },
+  {
+    "name": "White Vermouth"
+  },
+  {
+    "name": "Dry Curacao"
+  },
+  {
+    "name": "Nocino"
+  },
+  {
+    "name": "Averna"
+  },
+  {
+    "name": "Ramazzotti"
+  },
+  {
+    "name": "Fernet-Branca"
+  },
+  {
+    "name": "Allspice Dram"
+  },
+  {
+    "name": "Falernum"
+  },
+  {
+    "name": "Singani"
+  },
+  {
+    "name": "Arrack"
+  },
+  {
+    "name": "Blackstrap rum"
+  },
+  {
+    "name": "Ginger Syrup"
+  },
+  {
+    "name": "Honey syrup"
+  },
+  {
+    "name": "Blended Scotch"
+  },
+  {
+    "name": "Islay single malt Scotch"
+  },
+  {
+    "name": "151 proof rum"
+  },
+  {
+    "name": "7-up"
+  },
+  {
+    "name": "Absinthe"
+  },
+  {
+    "name": "Absolut citron"
+  },
+  {
+    "name": "Creme de Mure"
+  },
+  {
+    "name": "Olive Brine"
+  },
+  {
+    "name": "Pineapple Syrup"
+  },
+  {
+    "name": "St. Germain"
+  },
+  {
+    "name": "Lavender"
+  },
+  {
+    "name": "Whiskey"
+  },
+  {
+    "name": "Whisky"
+  },
+  {
+    "name": "Pomegranate juice"
+  },
+  {
+    "name": "Watermelon"
+  },
+  {
+    "name": "Chareau"
+  },
+  {
+    "name": "Cinnamon Whisky"
+  },
+  {
+    "name": "Red Bull"
+  },
+  {
+    "name": "Diet Coke"
+  },
+  {
+    "name": "Rosemary Syrup"
+  },
+  {
+    "name": "Figs"
+  },
+  {
+    "name": "Thyme"
+  },
+  {
+    "name": "Orange Slice"
+  },
+  {
+    "name": "Blood Orange"
+  },
+  {
+    "name": "Amaro Montenegro"
+  },
+  {
+    "name": "Ruby Port"
+  },
+  {
+    "name": "Rose"
+  }
+]
