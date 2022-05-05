@@ -20,7 +20,7 @@ const writeData = (data) => {
 const stringsToArray = (...strings) => strings.filter((string) => string != null && string !== '');
 
 const restructureDrinkObjects = (drinks) => drinks.map(
-  ( drink ) => {
+  (drink) => {
     const ingredients = stringsToArray(
       drink.strIngredient1,
       drink.strIngredient2,
@@ -128,9 +128,7 @@ async function gatherDrinks(callback) {
       });
     /* eslint-enable */
   }
-  const jsonData = { drinks: [] };
-  jsonData.drinks = allDrinks;
-  const content = JSON.stringify(jsonData);
+  const content = JSON.stringify(allDrinks);
   callback(content);
 }
 gatherDrinks((data) => {
