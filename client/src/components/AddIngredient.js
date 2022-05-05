@@ -4,6 +4,7 @@ const AddIngredient = ({ addIngredient }) => {
   const [ingredientInput, setIngredientInput] = useState("")
   const [matchingIngredients, setMatchingIngredients] = useState([])
   const [allIngredients, setAllIngredients] = useState([])
+  const [selectionIndex, setSelectionIndex] = useState(0)
 
   useEffect(() => {
     fetch("https://862840e1-6fa8-4a2d-a874-15705d2f04cb.mock.pstmn.io/get")
@@ -23,30 +24,39 @@ const AddIngredient = ({ addIngredient }) => {
     setMatchingIngredients(filter)
   }}
 
-  const handleClick = (event) => {
+  const handleClick = (selectionIndex) => {
     if (!ingredientInput) return;
-    addIngredient(event.target.innerHTML);
+    const ingredientName = matchingIngredients[selectionIndex].name
+    addIngredient(ingredientName);
     setIngredientInput("");
     setMatchingIngredients([]);
+    setSelectionIndex(0)
   }
 
   const handleKeyDown = (event) => {
     const enterKeyCode = 13;
-    if (event.keyCode === enterKeyCode) handleClick();
+    const downKeyCode = 40;
+    const upKeyCode = 38;
+    if (event.keyCode === enterKeyCode) handleClick(selectionIndex);
+    if (event.keyCode === downKeyCode) setSelectionIndex(selectionIndex + 1);
+    if (event.keyCode === upKeyCode) setSelectionIndex(selectionIndex - 1);
+    document.getElementsByClassName("active")[0].focus()
+
   }
 
   return (
-    <>
     <div className="add-ingredient-container">
       <input type="text" id="ingredient-input" onChange={handleChange} onKeyDown={handleKeyDown} value={ingredientInput} placeholder="Enter Ingredient" />
-      <button onClick={handleClick} id="add-ingredient">Add</button>
-    </div>
-    <div id="dropdown">
-      <ul>
-        {matchingIngredients.map((ingredient, i) => (<li key={i} onClick={handleClick}>{ingredient.name}</li>))}
+      <ul className="matching-ingredients-list">
+        {matchingIngredients.map((ingredient, i) => {
+          let activeClassName
+          if (i === selectionIndex) {
+            activeClassName = "active"
+          }
+          return (<li key={i} onClick={handleClick} className={activeClassName} tabIndex="-1">{ingredient.name}</li>)
+        })}
       </ul>
     </div>
-    </>
   )
 }
 

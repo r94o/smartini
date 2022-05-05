@@ -15,6 +15,48 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style>
+      body {
+      font-family: sans-serif;
+      }
+
+      input {
+        border: 1px solid #999;
+        padding: 0.5rem;
+        width: 300px;
+      }
+
+      .matching-ingredients-list {
+        border: 1px solid #999;
+        border-top-width: 0;
+        list-style: none;
+        margin-top: 0;
+        max-height: 143px;
+        overflow-y: auto;
+        padding-left: 0;
+        width: calc(300px + 1rem);
+      }
+
+      .matching-ingredients-list li {
+        padding: 0.5rem;
+      }
+
+      .active,
+      .matching-ingredients-list li:hover {
+        background-color: #357a9f;
+        color: #17160f;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .active{
+        color: white
+      }
+      .matching-ingredients-list li:not(:last-of-type) {
+        border-bottom: 1px solid #999;
+      }
+
+  </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
