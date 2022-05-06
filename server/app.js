@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const drinksRouter = require('./routes/drinks');
 const ingredientsRouter = require('./routes/ingredients');
+const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/drinks', drinksRouter);
 app.use('/ingredients', ingredientsRouter);
+app.use('/users', usersRouter);
 
 module.exports = app;
