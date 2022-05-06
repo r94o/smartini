@@ -1,16 +1,12 @@
 describe("Adding an ingredient and getting a recommendation", () => {
-  xit("suggests a martini", () => {
+  it("suggests a screwdriver", () => {
     cy.visit("/")
-    cy.addIngredient("Gin")
+    cy.addIngredient("Vodka")
 
     cy.get("#cocktail-list>table>tbody").should("be.empty")
 
-    cy.addIngredient("Dry Vermouth")
+    cy.addIngredient("Orange Juice")
 
-    cy.get("#cocktail-list>table>tbody").should("be.empty")
-
-    cy.addIngredient("Olive")
-
-    cy.get("#cocktail-list>table>tbody>tr").should("have.length", 1).and("contain", "Martini")
+    cy.get("#cocktail-list>table>tbody>tr").should("have.length", 1).and("contain", "Screwdriver")
   })
 })

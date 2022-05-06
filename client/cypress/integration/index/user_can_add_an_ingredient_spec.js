@@ -9,14 +9,14 @@ describe("Adding an ingredient", () => {
 
     cy.get("#ingredient-list>table>tbody>tr").should("have.length", 2).first().should("contain", "Dry Vermouth")
 
-    cy.addIngredient("Olive")
+    cy.addIngredient("Vodka")
 
-    cy.get("#ingredient-list>table>tbody>tr").should("have.length", 3).first().should("contain", "Olive")
+    cy.get("#ingredient-list>table>tbody>tr").should("have.length", 3).first().should("contain", "Vodka")
   })
 
   it("adds an ingredient when the 'Enter' key is pressed", () => {
     cy.visit("/")
-    cy.get("#ingredient-input").type("Gin{enter}")
+    cy.get("#ingredient-input").addIngredient("Gin")
     
     cy.get("#ingredient-list>table>tbody>tr").should("have.length", 1).first().should("contain", "Gin")
   })
