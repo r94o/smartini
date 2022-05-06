@@ -57,6 +57,7 @@ const restructureDrinkObjects = (drinks) => drinks.map(
       drink.strMeasure15,
     );
     measures = measures.map(measure => measure.toLowerCase());
+    if (drink.strDrink === "410 Gone") { drink.strInstructions = "Put it in a bucket" }
     return {
       id: drink.idDrink,
       ingredients,
