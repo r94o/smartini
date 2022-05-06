@@ -50,7 +50,6 @@ const AddIngredient = ({ addIngredient }) => {
   }
 
   const handleKeyDown = (event) => {
-    console.log(event)
     const [enterKeyCode, downKeyCode, upKeyCode] = [13, 40, 38];
     if (event.keyCode === enterKeyCode) handleEnter(selectionIndex);
     if (event.keyCode === downKeyCode) setSelectionIndex(selectionIndex + 1);

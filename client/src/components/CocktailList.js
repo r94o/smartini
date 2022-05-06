@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from "react-router-dom";
 
 const CocktailList = ({ ingredients }) => {
   const [cocktails, setCocktails] = useState([])
@@ -23,7 +24,7 @@ const CocktailList = ({ ingredients }) => {
         <tbody>
           {cocktails.map((cocktail, i) =>
             <tr key={i}>
-              <td><img src={cocktail.image} alt="cocktail" width="200" height="200"></img>{cocktail.displayName}</td>
+              <td><img src={cocktail.image} alt="cocktail" width="200" height="200"></img><Link to="/view" state={{ drink: cocktails[i] }}>{cocktail.displayName}</Link></td>
             </tr>
           )}
         </tbody>
