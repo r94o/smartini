@@ -8,6 +8,12 @@ const UsersController = {
       res.sendStatus(201);
     })
     .catch((err) => {
+      if (err.code === 11000) {
+        console.log('duplicate')
+      };
+      if (err.name === 'ValidationError') {
+        console.log('all fields required')
+      };
       res.status(500).send(err);
     })
   }
