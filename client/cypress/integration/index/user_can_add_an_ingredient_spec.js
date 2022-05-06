@@ -1,6 +1,8 @@
 describe("Adding an ingredient", () => {
   it("adds 3 ingredients", () => {
     cy.visit("/")
+    cy.get("#cocktail-list>table>tbody").should("be.empty")
+    // this assertion seems to make test pass
     cy.addIngredient("Gin")
 
     cy.get("#ingredient-list>table>tbody>tr").should("have.length", 1).first().should("contain", "Gin")

@@ -7,14 +7,14 @@ const AddIngredient = ({ addIngredient }) => {
   const [selectionIndex, setSelectionIndex] = useState(0)
 
   useEffect(() => {
-    fetch("https://862840e1-6fa8-4a2d-a874-15705d2f04cb.mock.pstmn.io/get")
+    fetch("http://localhost:3001/ingredients")
       .then(response => response.json())
-      .then(( ingredients ) => setAllIngredients(ingredients));
+      .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
   
   const handleChange = (event) => {
 
-    const input = event.target.value
+    const input = event.target.value.toLowerCase()
     setIngredientInput(input)
 
     if (input.length < 2) {
@@ -31,7 +31,7 @@ const AddIngredient = ({ addIngredient }) => {
 
   const handleEnter = (selectionIndex) => {
     if (!ingredientInput) return;
-    const ingredientName = matchingIngredients[selectionIndex].name
+    const ingredientName = matchingIngredients[selectionIndex].displayName
     addIngredient(ingredientName);
     resetState();
   }
@@ -68,7 +68,7 @@ const AddIngredient = ({ addIngredient }) => {
           if (i === selectionIndex) {
             activeClassName = "active"
           }
-          return (<li key={i} onClick={handleClick} className={activeClassName}>{ingredient.name}</li>)
+          return (<li key={i} onClick={handleClick} className={activeClassName}>{ingredient.displayName}</li>)
         })}
       </ul>
     </div>

@@ -5,7 +5,7 @@ describe("Adding an ingredient and getting a recommendation", () => {
 
     cy.get("#cocktail-list>table>tbody").should("be.empty")
 
-    cy.addIngredient("Orange Juice")
+    cy.addIngredient("orange juice")
 
     cy.get("#cocktail-list>table>tbody>tr").should("have.length", 1).and("contain", "Screwdriver")
   })
