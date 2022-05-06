@@ -11,14 +11,14 @@ const DrinksController = {
   },
   FilterByIdString: (req, res) => {
     Drink.findOne({ id: req.params.id }).then((drink) => {
-      console.log(drink.strDrink);
+      console.log(drink.name);
       res.send({ drinks: [drink] });
     });
   },
   FilterByIngredient: (req, res) => {
     const { ingredients } = req.body;
     console.log('Contains Any:', ingredients);
-    Drink.find({ ingredients: { $in: ingredients } }).then((drinks) => {
+    return Drink.find({ ingredients: { $in: ingredients } }).then((drinks) => {
       res.send({ drinks });
     });
   },

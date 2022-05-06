@@ -12,7 +12,6 @@
     "cross-fetch": "^3.1.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "jest": "^28.0.3",
     "mongoose": "^6.3.2",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16"
@@ -20,6 +19,10 @@
   "devDependencies": {
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mongodb": "^1.0.0",
+    "jest": "^28.1.0",
+    "mongodb-memory-server": "^8.5.2",
+    "supertest": "^6.2.3"
   }
 }
