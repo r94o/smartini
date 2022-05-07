@@ -8,7 +8,7 @@ module.exports = {
     'airbnb-base',
   ],
   plugins: [
-    'mongodb'
+    'mongodb',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
