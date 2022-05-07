@@ -35,6 +35,7 @@ const populateDrinks = (drinks) => {
   drinks.forEach((drink) => {
     try {
       let document = new Drink({
+        id: drink.id,
         name: drink.name,
         displayName: drink.displayName,
         ingredients: drink.ingredients,
