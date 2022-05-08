@@ -132,7 +132,9 @@ const updateDrinksCollection = async () => {
     await dropCollection(Drink);
   });
   const drinks = require('../drinks.json');
+  const customDrinks = require('../customDrinks.json');
   populateDrinks(drinks);
+  populateDrinks(customDrinks);
 }
 
 const populateDatabase = async (callback) => {

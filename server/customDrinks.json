@@ -1,0 +1,26 @@
+[
+  {
+    "ingredients": [
+      "ginger syrup",
+      "vodka",
+      "lime juice",
+      "coriander seeds",
+      "coriander leaves"
+    ],
+    "measures": [
+      "1 1/4 oz",
+      "3 1/2 oz",
+      "1 3/4 oz",
+      "1 tsp",
+      "10"
+    ],
+    "name": "coriander and ginger martini",
+    "displayName": "Coriander and Ginger Martini",
+    "category": "Cocktail",
+    "iba": null,
+    "alcoholic": "Alcoholic",
+    "glass": "Martini glass",
+    "instructions": "Place the ginger syrup in a cocktail shaker, along with all remaining ingredients and plenty of cubed ice. Shake hard for about 20 seconds, then double-strain (through a Hawthorne strainer and into a fine-mesh sieve) into two prechilled martini glasses. Garnish with a piece of crystallized ginger. Serve at once. ",
+    "image": "https://i1.wp.com/tasteandtipple.ca/wp-content/uploads/2017/09/Coriander-Ginger-Martini-Thumbnail-0765.jpg"
+  }
+]
