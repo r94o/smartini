@@ -7,6 +7,7 @@ const DrinksController = require('../controllers/drinks');
 router.get('/', DrinksController.Index);
 router.get('/:id', DrinksController.FindByIdString);
 router.get('/name/:name', DrinksController.FindByName);
+router.get('/ingredient/:ingredient', DrinksController.FilterByIngredient);
 router.post('/', DrinksController.FilterByAllIngredientsAvailable);
 
 module.exports = router;

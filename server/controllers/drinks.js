@@ -1,4 +1,5 @@
 const Drink = require('../models/drink');
+const Glass = require('../models/glass');
 
 const DrinksController = {
   Index: (req, res) => {
@@ -25,8 +26,9 @@ const DrinksController = {
       });
   },
   FilterByIngredient: (req, res) => {
-    const { ingredients } = req.body;
-    Drink.find({ ingredients: { $in: ingredients } })
+    // const { ingredients } = req.body;
+    const searchIngredient = decodeURI(req.params.ingredient);
+    Drink.find({ ingredients: { $in: searchIngredient } })
       .populate("glass")
       .then((drinks) => {
         res.send({ drinks });
