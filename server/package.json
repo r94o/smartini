@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "jest"
+    "test": "jest",
+    "populate": "node ./helpers/databasePopulator.js",
+    "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -18,6 +20,7 @@
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
+    "concurrently": "^7.1.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"

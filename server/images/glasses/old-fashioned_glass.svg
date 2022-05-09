@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg41"
+   width="102.32737"
+   height="102.32737"
+   viewBox="0 0 102.32737 102.32737"
+   sodipodi:docname="old-fashioned_glass.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs45">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="90.923113,67.597284"
+       end_point="90.923113,149.23768"
+       center_point="90.923113,108.41748"
+       id="path-effect20857"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview43"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.5767182"
+     inkscape:cx="-16.687894"
+     inkscape:cy="65.005168"
+     inkscape:window-width="954"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g20853" />
+  <g
+     inkscape:groupmode="layer"
+     id="g20853"
+     inkscape:label="Old Fashioned Glass"
+     transform="translate(-304.4719,-399.45408)">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 74.240566,108.56213 c 0.288712,40.09726 -0.08469,0.42344 0.204023,40.5207 4.681033,-0.0793 11.797491,-0.004 16.478524,-0.0827 m 16.682547,-40.438 c -0.28871,40.09726 0.0847,0.42344 -0.20402,40.5207 -4.68104,-0.0793 -11.797494,-0.004 -16.478527,-0.0827"
+       id="path20851"
+       sodipodi:nodetypes="ccc"
+       inkscape:path-effect="#path-effect20857"
+       inkscape:original-d="m 74.240566,108.56213 c 0.288712,40.09726 -0.08469,0.42344 0.204023,40.5207 4.681033,-0.0793 11.797491,-0.004 16.478524,-0.0827"
+       transform="translate(264.71247,321.79529)" />
+  </g>
+</svg>
