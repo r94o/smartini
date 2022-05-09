@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Drink = require("../models/drink");
 const Glass = require("../models/glass");
