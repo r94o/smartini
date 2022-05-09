@@ -39,6 +39,11 @@ const populateIngredients = (ingredients) => {
       let document = new Ingredient({
         name: ingredient.name,
         displayName: ingredient.displayName,
+        type: ingredient.type,
+        alcoholic: ingredient.alcoholic,
+        abv: ingredient.abv,
+        description: ingredient.description,
+        image: ingredient.image,
       });
       updateTable(ingredientsTable, document);
       documents.push(document)
@@ -112,7 +117,7 @@ const updateIngredientsCollection = async () => {
     console.log("Current Ingredient Count:", count);
     await dropCollection(Ingredient);
   });
-  const ingredients = require('../ingredients.json');
+  const ingredients = require('../completeIngredients.json');
   populateIngredients(ingredients);
 };
 

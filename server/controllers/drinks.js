@@ -3,12 +3,11 @@ const Glass = require('../models/glass');
 
 const DrinksController = {
   Index: (req, res) => {
-    Drink.find((err, drinks) => {
-      if (err) {
-        throw err;
-      }
-      res.send({ drinks });
-    });
+    Drink.find()
+      .populate("glass")
+      .then((drinks) => {
+        res.send({ drinks });
+      });
   },
   FindByIdString: (req, res) => {
     Drink.findOne({ id: req.params.id })
@@ -38,9 +37,11 @@ const DrinksController = {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     Drink.find({
       $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
-    }).then((drinks) => {
-      res.json({ drinks });
-    });
+    })
+      .populate("glass")
+      .then((drinks) => {
+        res.json({ drinks });
+      });
   },
 };
 
