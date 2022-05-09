@@ -2,6 +2,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   class="glass-icon"
+   style="display:inline;fill:none;stroke:black;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    version="1.1"
    id="svg41"
    width="102.32737"
@@ -54,7 +56,6 @@
      inkscape:label="Champagne Flute"
      transform="translate(-304.4719,-399.45408)">
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 82.355894,63.598214 c -4.896771,35.065403 -0.318157,38.566666 1.604449,40.966636 7.397034,6.32728 4.891458,13.2241 5.534658,19.68087 v 17.35968 c 0,7.76393 -11.859293,4.6959 -11.841426,7.8703 l 13.269538,-0.0595 m 8.567219,-85.817986 c 4.896768,35.065403 0.318157,38.566666 -1.604449,40.966636 -7.397034,6.32728 -4.891458,13.2241 -5.534658,19.68087 v 17.35968 c 0,7.76393 11.859295,4.6959 11.841425,7.8703 l -13.269537,-0.0595"
        id="path3135"
        sodipodi:nodetypes="cccscc"
