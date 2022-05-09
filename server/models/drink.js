@@ -2,9 +2,11 @@ const mongoose = require('mongoose');
 
 const DrinkSchema = new mongoose.Schema(
   {
-    id: { type: String, unique: true },
-    ingredients: [{ type: String }],
-    measures: { type: Array },
+    ingredients: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Ingredient",
+    }],
+    measures: [{ type: String }],
     name: { type: String, unique: true, required: true },
     displayName: { type: String, required: true },
     category: { type: String },
