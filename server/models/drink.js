@@ -3,20 +3,19 @@ const mongoose = require('mongoose');
 const DrinkSchema = new mongoose.Schema(
   {
     id: { type: String, unique: true },
-    ingredients: { type: Array },
+    ingredients: [{ type: String }],
     measures: { type: Array },
-    strDrink: { type: String },
-    strTags: { type: String },
-    strCategory: { type: String },
-    strIBA: { type: String },
-    strAlcoholic: { type: String },
-    strGlass: { type: String },
-    strInstructions: { type: String },
-    strDrinkThumb: { type: String },
-    strImageSource: { type: String },
-    strImageAttribution: { type: String },
-    strCreativeCommonsConfirmed: { type: String },
-    dateModified: { type: String },
+    name: { type: String, unique: true, required: true },
+    displayName: { type: String, required: true },
+    category: { type: String },
+    iba: { type: String },
+    alcoholic: { type: String },
+    glass: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Glass",
+    },
+    instructions: { type: String, required: true },
+    image: { type: String },
   },
 );
 

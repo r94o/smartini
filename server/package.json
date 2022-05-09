@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest",
+    "populate": "node ./helpers/databasePopulator.js",
+    "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,11 +14,13 @@
     "cross-fetch": "^3.1.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "jest": "^28.0.3",
     "mongoose": "^6.3.2",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
+    "concurrently": "^7.1.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"
