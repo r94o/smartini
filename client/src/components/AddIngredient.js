@@ -59,6 +59,12 @@ const AddIngredient = ({ addIngredient }) => {
   }
   
   return (
+
+
+
+
+
+    
     <div className="add-ingredient-container">
       <input type="search" id="ingredient-input" onChange={handleChange} onKeyDown={handleKeyDown} value={ingredientInput} placeholder="Enter Ingredient" />
       <ul className="matching-ingredients-list">

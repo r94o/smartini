@@ -35,7 +35,7 @@ input {
 
 .active,
 .matching-ingredients-list li:hover {
-  background-color: #357a9f;
+  background-color: #797b7c;
   color: white;
   cursor: pointer;
   font-weight: 700;
@@ -44,3 +44,4 @@ input {
 .matching-ingredients-list li:not(:last-of-type) {
   border-bottom: 1px solid #999;
 }
+
