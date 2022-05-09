@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "test": "jest",
+    "populate": "node ./helpers/databasePopulator.js",
     "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {

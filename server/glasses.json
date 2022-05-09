@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Balloon Glass",
+    "displayName": "Balloon Glass",
+    "image": "server/images/glasses/balloon_glass.svg"
+  },
+  {
+    "name": "Coupe Glass",
+    "displayName": "Coupe Glass",
+    "image": "server/images/glasses/coupe_glass.svg"
+  },
+  {
+    "name": "Hurricane glass",
+    "displayName": "Hurricane glass",
+    "image": "server/images/glasses/hurricane_glass.svg"
+  },
+  {
+    "name": "Margarita glass",
+    "displayName": "Margarita glass",
+    "image": "server/images/glasses/margarita_glass.svg"
+  },
+  {
+    "name": "Margarita/Coupette glass",
+    "displayName": "Margarita/Coupette glass",
+    "image": "server/images/glasses/margarita_glass.svg"
+  },
+  {
+    "name": "Martini Glass",
+    "displayName": "Martini Glass",
+    "image": "server/images/glasses/martini_glass.svg"
+  },
+  {
+    "name": "Nick and Nora Glass",
+    "displayName": "Nick and Nora Glass",
+    "image": "server/images/glasses/nick_and_nora_glass.svg"
+  },
+  {
+    "name": "Collins Glass",
+    "displayName": "Collins Glass",
+    "image": "server/images/glasses/collins_glass.svg"
+  },
+  {
+    "name": "Highball Glass",
+    "displayName": "Highball Glass",
+    "image": "server/images/glasses/highball_glass.svg"
+  },
+  {
+    "name": "Champagne flute",
+    "displayName": "Champagne flute",
+    "image": "server/images/glasses/champagne_flute.svg"
+  },
+  {
+    "name": "Irish coffee cup",
+    "displayName": "Irish coffee cup",
+    "image": "server/images/glasses/irish_coffee_cup.svg"
+  },
+  {
+    "name": "Coffee mug",
+    "displayName": "Coffee mug",
+    "image": "server/images/glasses/coffee_mug.svg"
+  },
+  {
+    "name": "Cocktail glass",
+    "displayName": "Cocktail glass",
+    "image": "server/images/glasses/cocktail_glass.svg"
+  },
+  {
+    "name": "Parfait glass",
+    "displayName": "Parfait glass",
+    "image": "server/images/glasses/parfait_glass.svg"
+  },
+  {
+    "name": "Pousse cafe glass",
+    "displayName": "Pousse cafe glass",
+    "image": "server/images/glasses/pousse_cafe_glass.svg"
+  },
+  {
+    "name": "Cordial glass",
+    "displayName": "Cordial glass",
+    "image": "server/images/glasses/cordial_glass.svg"
+  },
+  {
+    "name": "Beer mug",
+    "displayName": "Beer mug",
+    "image": "server/images/glasses/beer_mug.svg"
+  },
+  {
+    "name": "Brandy snifter",
+    "displayName": "Brandy snifter",
+    "image": "server/images/glasses/brandy_snifter.svg"
+  },
+  {
+    "name": "Beer Glass",
+    "displayName": "Beer Glass",
+    "image": "server/images/glasses/beer_glass.svg"
+  },
+  {
+    "name": "Pint glass",
+    "displayName": "Pint glass",
+    "image": "server/images/glasses/pint_glass.svg"
+  },
+  {
+    "name": "Beer pilsner",
+    "displayName": "Beer pilsner",
+    "image": "server/images/glasses/beer_pilsner_glass.svg"
+  },
+  {
+    "name": "Whiskey sour glass",
+    "displayName": "Whiskey sour glass",
+    "image": "server/images/glasses/whiskey_glass.svg"
+  },
+  {
+    "name": "Pitcher",
+    "displayName": "Pitcher",
+    "image": "server/images/glasses/pitcher.svg"
+  },
+  {
+    "name": "Old-fashioned glass",
+    "displayName": "Old-fashioned glass",
+    "image": "server/images/glasses/old-fashioned_glass.svg"
+  },
+  {
+    "name": "Whiskey Glass",
+    "displayName": "Whiskey Glass",
+    "image": "server/images/glasses/whiskey_glass.svg"
+  },
+  {
+    "name": "Shot glass",
+    "displayName": "Shot glass",
+    "image": "server/images/glasses/shot_glass.svg"
+  },
+  {
+    "name": "Wine Glass",
+    "displayName": "Wine Glass",
+    "image": "server/images/glasses/wine_glass.svg"
+  },
+  {
+    "name": "White wine glass",
+    "displayName": "White wine glass",
+    "image": "server/images/glasses/white_wine_glass.svg"
+  },
+  {
+    "name": "Punch bowl",
+    "displayName": "Punch bowl",
+    "image": "server/images/glasses/punch_bowl.svg"
+  },
+  {
+    "name": "Copper Mug",
+    "displayName": "Copper Mug",
+    "image": "server/images/glasses/copper_mug.svg"
+  },
+  {
+    "name": "Jar",
+    "displayName": "Jar",
+    "image": "server/images/glasses/mason_jar.svg"
+  },
+  {
+    "name": "Mason jar",
+    "displayName": "Mason jar",
+    "image": "server/images/glasses/mason_jar.svg"
+  }
+]
