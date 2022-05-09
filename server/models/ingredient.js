@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const IngredientSchema = new mongoose.Schema(
   {
-    id: { type: String },
     name: {
       type: String,
       required: true,

@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "test": "jest",
+    "populate": "node ./helpers/databasePopulator.js",
     "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"
