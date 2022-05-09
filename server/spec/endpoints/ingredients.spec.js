@@ -13,6 +13,11 @@ describe('Ingredients endpoint', () => {
       expect(firstObject).toHaveProperty('_id');
       expect(firstObject).toHaveProperty('name');
       expect(firstObject).toHaveProperty('displayName');
+      expect(firstObject).toHaveProperty('type');
+      expect(firstObject).toHaveProperty('alcoholic');
+      expect(firstObject).toHaveProperty('abv');
+      expect(firstObject).toHaveProperty('description');
+      expect(firstObject).toHaveProperty('image');
 
       const objectsCount = response.body.ingredients.length;
       expect(objectsCount).not.toEqual([null]);
