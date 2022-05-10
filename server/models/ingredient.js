@@ -8,6 +8,11 @@ const IngredientSchema = new mongoose.Schema(
       unique: true,
     },
     displayName: { type: String },
+    type: { type: String },
+    alcoholic: { type: String },
+    abv: { type: String },
+    description: { type: String },
+    image: { type: String }
   },
 );
 

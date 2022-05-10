@@ -4,11 +4,13 @@ require('../mongodb_helper');
 const Drink = require('../../models/drink');
 
 describe('Drink model', () => {
+  let mockGlassId;
   beforeEach((done) => {
     mongoose.connection.collections.drinks.drop(() => {
       Drink.syncIndexes(() => {
         done();
       });
+      mockGlassId = new mongoose.Types.ObjectId();
     });
   });
 
@@ -21,7 +23,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -37,7 +39,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -53,7 +55,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -69,7 +71,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -85,7 +87,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -101,7 +103,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -117,7 +119,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -133,11 +135,11 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
-    expect(drink.glass).toEqual('Collins');
+    expect(drink.glass).toEqual(mockGlassId);
   });
 
   it('has instructions', () => {
@@ -149,7 +151,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -165,7 +167,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -180,7 +182,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -195,7 +197,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -211,7 +213,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
     await expect(drink.save()).rejects.toThrow();
@@ -226,7 +228,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -240,7 +242,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -264,7 +266,7 @@ describe('Drink model', () => {
       category: 'booze',
       iba: 'Contemporary Classic',
       alcoholic: 'Alcoholic',
-      glass: 'Collins',
+      glass: mockGlassId,
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
@@ -283,7 +285,7 @@ describe('Drink model', () => {
           category: 'booze',
           iba: 'Contemporary Classic',
           alcoholic: 'Alcoholic',
-          glass: 'Collins',
+          glass: mockGlassId,
           instructions: 'Mix together in washing machine',
           image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
         });

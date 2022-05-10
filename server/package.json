@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "test": "jest",
-    "lint": "npx eslint --fix ."
+    "lint": "npx eslint --fix .",
+    "populate": "node ./helpers/databasePopulator.js",
+    "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,6 +22,8 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.17.10",
+    "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",

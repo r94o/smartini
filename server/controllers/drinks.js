@@ -1,37 +1,51 @@
 const Drink = require('../models/drink');
+const Glass = require('../models/glass');
 
 const DrinksController = {
   Index: (req, res) => {
     try {
-      Drink.find().then((drinks) => {
-        res.send({ drinks });
-      });
-    } catch (err) {
-      res.status(500);
-      return 'Error';
-      // res.send(err);
+      Drink.find()
+        .populate("glass")
+        .then((drinks) => {
+          res.send({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
     }
   },
-  FilterByIdString: (req, res) => {
+  FindByIdString: (req, res) => {
     try {
-      Drink.findOne({ id: req.params.id }).then((drink) => {
-        res.send({ drinks: [drink] });
-      });
-    } catch (err) {
-      res.status(500);
-      return 'Error';
-      // res.send(err);
+      Drink.findOne({ id: req.params.id })
+        .populate("glass")
+        .then((drink) => {
+          res.send({ drinks: [drink] });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
+  },
+  FindByName: (req, res) => {
+    const searchName = decodeURI(req.params.name);
+    try {
+      Drink.findOne({ name: searchName })
+        .populate("glass")
+        .then((drink) => {
+          res.send({ drinks: [drink] });
+        });
+    } catch (e) {
+      res.sendStatus(500);
     }
   },
   FilterByIngredient: (req, res) => {
-    const { ingredients } = req.body;
+    const searchIngredient = decodeURI(req.params.ingredient);
     try {
-      Drink.find({ ingredients: { $in: ingredients } }).then((drinks) => {
-        res.send({ drinks });
-      });
-    } catch (err) {
-      res.status(500);
-      // res.send(err);
+      Drink.find({ ingredients: { $in: searchIngredient } })
+        .populate("glass")
+        .then((drinks) => {
+          res.send({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
     }
   },
   FilterByAllIngredientsAvailable: (req, res) => {
@@ -39,12 +53,13 @@ const DrinksController = {
     try {
       Drink.find({
         $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
-      }).then((drinks) => {
-        res.json({ drinks });
-      });
-    } catch (err) {
-      res.status(500);
-      // res.send(err);
+      })
+        .populate("glass")
+        .then((drinks) => {
+          res.json({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
     }
   },
 };
