@@ -10,7 +10,8 @@ const IngredientSearch = ({ setIngredients }) => {
   const [allIngredients, setAllIngredients] = useState([])
 
   const handleChange = (event, value) => {
-    setIngredients(value.map(value => value.name));
+    const ingredientNames = value.map(value => value.name)
+    setIngredients(["Ice", "Salt", ...ingredientNames]);
   }
 
   useEffect(() => {
