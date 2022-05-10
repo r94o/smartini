@@ -1,4 +1,5 @@
-import request from 'supertest';
+const request = require('supertest');
+const waitForExpect = require('wait-for-expect');
 
 const baseUrl = 'http://localhost:3001/';
 
@@ -10,18 +11,20 @@ describe('Drinks endpoint', () => {
       expect(response.statusCode).toBe(200);
 
       const firstObject = response.body.drinks[0];
-      expect(firstObject).toHaveProperty('_id');
-      expect(firstObject).toHaveProperty('id');
-      expect(firstObject).toHaveProperty('ingredients');
-      expect(firstObject).toHaveProperty('measures');
-      expect(firstObject).toHaveProperty('name');
-      expect(firstObject).toHaveProperty('displayName');
-      expect(firstObject).toHaveProperty('category');
-      expect(firstObject).toHaveProperty('iba');
-      expect(firstObject).toHaveProperty('alcoholic');
-      expect(firstObject).toHaveProperty('glass');
-      expect(firstObject).toHaveProperty('instructions');
-      expect(firstObject).toHaveProperty('image');
+
+      await waitForExpect(() => {
+        expect(firstObject).toHaveProperty('_id');
+        expect(firstObject).toHaveProperty('ingredients');
+        expect(firstObject).toHaveProperty('measures');
+        expect(firstObject).toHaveProperty('name');
+        expect(firstObject).toHaveProperty('displayName');
+        expect(firstObject).toHaveProperty('category');
+        expect(firstObject).toHaveProperty('iba');
+        expect(firstObject).toHaveProperty('alcoholic');
+        expect(firstObject).toHaveProperty('glass');
+        expect(firstObject).toHaveProperty('instructions');
+        expect(firstObject).toHaveProperty('image');
+      });
 
       const objectsCount = response.body.drinks.length;
       expect(objectsCount).not.toEqual([null]);
@@ -51,7 +54,9 @@ describe('Drinks endpoint', () => {
         instructions: 'Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.',
         image: 'https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg',
       };
-      expect(firstObject).toMatchObject(margaritaObject);
+      await waitForExpect(() => {
+        expect(firstObject).toMatchObject(margaritaObject);
+      });
     });
     it('returns an empty array if it does not exist', async () => {
       const id = 'a1b1c0d0e7'; // Id String that isn't in the database
