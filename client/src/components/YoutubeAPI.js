@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 const YoutubeAPI = ({drink}) => {
 
-  const [youtubeData, setYoutubeData] = useState({});
+  const [youtubeData, setYoutubeData] = useState();
 
   useEffect(()=> {
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=how%20to%20make%20${drink}%20cocktail&type=video&key=AIzaSyBBcViTJ4hlUznphW_P-qQkXui22TGs8dM`)
