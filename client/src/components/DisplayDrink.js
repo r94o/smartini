@@ -2,17 +2,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import ImageIcon from '@mui/icons-material/Image';
-import WorkIcon from '@mui/icons-material/Work';
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import LiquorIcon from '@mui/icons-material/Liquor';
 import DisplayIngredients from './DisplayIngredients';
+import YoutubeAPI from './YoutubeAPI'
 
 const DrinkDisplay = ({ drink }) => {
   if (drink) {
@@ -40,6 +31,9 @@ const DrinkDisplay = ({ drink }) => {
             <Typography>
              {drink.instructions}
             </Typography>
+          </div>
+          <div>
+           <YoutubeAPI drink={drink}/>
           </div>
         </CardContent>
       </Card>
