@@ -44,3 +44,7 @@ header {
 #display-drink-container {
   margin-top: 15px;
 }
+
+#drink-search {
+  display: flex;
+}
