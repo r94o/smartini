@@ -4,9 +4,10 @@ const IngredientsController = {
   Index: (req, res) => {
     Ingredient.find((err, ingredients) => {
       if (err) {
-        throw err;
+        // res.send(err);
+        res.sendStatus(500);
       }
-      res.send({ ingredients });
+      res.status(200).send({ ingredients });
     });
   },
 };
