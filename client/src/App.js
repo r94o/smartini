@@ -1,28 +1,37 @@
-import './App.css';
-import AddIngredient from './components/AddIngredient';
-import { useState } from 'react'
-import IngredientList from './components/IngredientList';
-import CocktailList from './components/CocktailList';
+import { useState, useEffect } from 'react'
+import IngredientSearch from './components/IngredientSearch';
+import Header from './components/Header';
+import MatchingDrinks from './components/MatchingDrinks';
+import DisplayDrink from './components/DisplayDrink';
 
 function App() {
-  const [ingredients, setIngredients] = useState([]);
 
-  const addIngredient = (ingredient) => {
-    setIngredients([ingredient, ...ingredients])
-  }
+  const [ingredients, setIngredients] = useState([])
+  const [drink, setDrink] = useState(null)
 
-  const deleteIngredient = (deleteIndex) => {
-    const updatedIngredients = ingredients.filter((_, i) => i !== deleteIndex);
-    setIngredients(updatedIngredients);
-  }
+  useEffect(() => {
+    setDrink(null);
+  },[ingredients])
 
   return (
-    <div className="main-container">
-      <AddIngredient addIngredient={addIngredient} />
-      <IngredientList ingredients={ingredients} deleteIngredient={deleteIngredient}/>
-      <CocktailList ingredients={ingredients} />
+    <div>
+      <Header />
+      <div id="main-container">
+        <div id="left-side-inner-container">
+          <div id="ingredient-search">
+            <IngredientSearch setIngredients={setIngredients} />
+          </div>
+          <div id="matching-drinks-container">
+            <MatchingDrinks ingredients={ingredients} setDrink={setDrink}/>
+          </div>
+        </div>
+        <div id="right-side-inner-container">
+          <DisplayDrink drink={drink} />
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default App;
