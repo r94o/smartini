@@ -50,8 +50,8 @@ describe('Ingredient model', () => {
   });
 
   it('can list all ingredients', (done) => {
-    Ingredient.find((err, ingredients) => {
-      expect(err).toBeNull();
+    Ingredient.find((findError, ingredients) => {
+      expect(findError).toBeNull();
       expect(ingredients).toEqual([]);
       done();
     });
@@ -63,12 +63,10 @@ describe('Ingredient model', () => {
       displayName: 'Tasty Beverage',
     });
 
-    ingredient.save((err) => {
-      expect(err).toBeNull();
-
-      Ingredient.find((err, ingredients) => {
-        expect(err).toBeNull();
-
+    ingredient.save((saveError) => {
+      expect(saveError).toBeNull();
+      Ingredient.find((findError, ingredients) => {
+        expect(findError).toBeNull();
         expect(ingredients[0]).toMatchObject({
           name: 'tasty beverage',
           displayName: 'Tasty Beverage',

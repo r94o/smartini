@@ -4,45 +4,64 @@ const fetch = require('cross-fetch');
 
 const DrinksController = {
   Index: (req, res) => {
-    Drink.find()
-      .populate("glass")
-      .then((drinks) => {
-        res.send({ drinks });
-      });
+    try {
+      Drink.find()
+        .populate("glass")
+        .then((drinks) => {
+          res.send({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
   },
   FindByIdString: (req, res) => {
-    Drink.findOne({ id: req.params.id })
-      .populate("glass")
-      .then((drink) => {
-        res.send({ drinks: [drink] });
-      });
+    try {
+      Drink.findOne({ id: req.params.id })
+        .populate("glass")
+        .then((drink) => {
+          res.send({ drinks: [drink] });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
   },
   FindByName: (req, res) => {
     const searchName = decodeURI(req.params.name);
-    Drink.findOne({ name: searchName })
-      .populate("glass")
-      .then((drink) => {
-        res.send({ drinks: [drink] });
-      });
+    try {
+      Drink.findOne({ name: searchName })
+        .populate("glass")
+        .then((drink) => {
+          res.send({ drinks: [drink] });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
   },
   FilterByIngredient: (req, res) => {
-    // const { ingredients } = req.body;
     const searchIngredient = decodeURI(req.params.ingredient);
-    Drink.find({ ingredients: { $in: searchIngredient } })
-      .populate("glass")
-      .then((drinks) => {
-        res.send({ drinks });
-      });
+    try {
+      Drink.find({ ingredients: { $in: searchIngredient } })
+        .populate("glass")
+        .then((drinks) => {
+          res.send({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
   },
   FilterByAllIngredientsAvailable: (req, res) => {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
-    Drink.find({
-      $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
-    })
-      .populate("glass")
-      .then((drinks) => {
-        res.json({ drinks });
-      });
+    try {
+      Drink.find({
+        $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
+      })
+        .populate("glass")
+        .then((drinks) => {
+          res.json({ drinks });
+        });
+    } catch (e) {
+      res.sendStatus(500);
+    }
   },
   FindVideoByName: (req, res) => {
     const drinkName = encodeURI(req.params.name);
