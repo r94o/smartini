@@ -6,7 +6,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import LiquorIcon from '@mui/icons-material/Liquor';
 
 const DisplayIngredients = ({ drink }) => {
-  console.log(drink)
   if (drink) {
     return (
       <List dense={true} disablePadding={true}>
