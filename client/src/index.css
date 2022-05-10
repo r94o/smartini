@@ -48,3 +48,7 @@ header {
 #drink-search {
   display: flex;
 }
+
+#youtube-container {
+  margin-top: 15px
+}
