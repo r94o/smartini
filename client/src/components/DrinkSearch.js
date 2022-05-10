@@ -16,7 +16,7 @@ const DrinkSearch = ({ setDrink }) => {
     fetch("http://localhost:3001/drinks/")
       .then(response => response.json())
       .then(( {drinks} ) => setAllDrinks(drinks));
-  }, []);
+      }, []);
 
   return (
       <Autocomplete
