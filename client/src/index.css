@@ -40,3 +40,7 @@ header {
   width: 35%;
   margin-right: 20px;
 }
+
+#display-drink-container {
+  margin-top: 15px;
+}

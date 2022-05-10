@@ -3,6 +3,7 @@ import IngredientSearch from './components/IngredientSearch';
 import Header from './components/Header';
 import MatchingDrinks from './components/MatchingDrinks';
 import DisplayDrink from './components/DisplayDrink';
+import DrinkSearch from './components/DrinkSearch';
 
 function App() {
 
@@ -26,7 +27,13 @@ function App() {
           </div>
         </div>
         <div id="right-side-inner-container">
-          <DisplayDrink drink={drink} />
+          <div id="drink-search">
+            <DrinkSearch setDrink={setDrink} />
+          </div>
+          <div id="display-drink-container">
+            <DisplayDrink drink={drink} />
+          </div>
+          
         </div>
       </div>
     </div>

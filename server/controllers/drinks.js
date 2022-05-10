@@ -52,7 +52,6 @@ const DrinksController = {
       const videoId = data.items[0].id.videoId
       res.json({ videoId })
     });
-    
   }
 };
 
