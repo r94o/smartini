@@ -68,8 +68,10 @@ const DrinksController = {
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=how%20to%20make%20${drinkName}%20cocktail&type=video&key=${process.env.YOUTUBE_API_KEY}`)
     .then(response => response.json())
     .then(data => {
-      const videoId = data.items[0].id.videoId
-      res.json({ videoId })
+      if (data.items) {
+        const videoId = data.items[0].id.videoId
+        res.json({ videoId })
+      }
     });
   }
 };
