@@ -2,6 +2,10 @@ const Drink = require('../models/drink');
 const Glass = require('../models/glass');
 const fetch = require('cross-fetch');
 
+const removeSearchIngredients = (ingredients, searchIngredients) => {
+  return ingredients.filter((ingredient) => !(searchIngredients.includes(ingredient)));
+};
+
 const DrinksController = {
   Index: (req, res) => {
     try {
@@ -64,13 +68,33 @@ const DrinksController = {
     }
   },
   FilterByOneIngredientMissing: (req, res) => {
-    const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
+    const searchIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
-      Drink.find({ ingredients: { $in: searchIngredient } })
-        .populate("glass")
+      Drink.find({ ingredientStrings: { $in: searchIngredients } })
+        .lean()
         .then((drinks) => {
-          res.json({ drinks });
-        });
+          let pojoDrinks = drinks.map((drink) => {
+            let returnObject = {};
+            returnObject._id = drink._id;
+            returnObject.ingredients = drink.ingredientStrings;
+            return returnObject;
+          })
+
+          pojoDrinks.forEach((drink) => {
+            drink.ingredients = removeSearchIngredients(drink.ingredients, searchIngredients);
+            drink.ingredientsFilteredLength = drink.ingredients.length;
+          })
+          const oneMissing = pojoDrinks.filter((drink) => drink.ingredientsFilteredLength == 1);
+          const oneMissingIds = oneMissing.map(drink => drink._id);
+
+          Drink.find({
+            '_id': {
+              $in: oneMissingIds
+            }
+          }).then((drinks) => {
+            res.send(drinks);
+          });
+        })
     } catch (e) {
       res.sendStatus(500);
     }
