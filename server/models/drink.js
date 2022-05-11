@@ -7,6 +7,7 @@ const DrinkSchema = new mongoose.Schema(
       ref: "Ingredient",
     }],
     ingredientStrings: [{ type: String }],
+    ingredientTypes: [{ type: String }],
     measures: [{ type: String }],
     name: { type: String, unique: true, required: true },
     displayName: { type: String, required: true },
