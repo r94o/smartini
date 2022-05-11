@@ -1,0 +1,6 @@
+# this is the command from the client-side to create a production build
+# ...then move it into the public folder of the server
+
+npm run build && mv -f build/* ../server/public
+
+cd ../server/public && rm -r static && cd ../../client && npm run build && mv -f build/* ../server/public
