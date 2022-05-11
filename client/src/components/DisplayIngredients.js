@@ -9,6 +9,7 @@ import LiquorOutlinedIcon from '@mui/icons-material/LiquorOutlined';
 const DisplayIngredients = ({ drink, searchedIngredients }) => {
   if (drink) {
     return (
+      <div style={{textTransform: 'capitalize'}}>
       <List dense={true} disablePadding={true}>
         {drink.ingredients.map((ingredient, i) => {
           let icon = <LiquorOutlinedIcon sx={{ color: "#ababab" }} />
@@ -29,6 +30,7 @@ const DisplayIngredients = ({ drink, searchedIngredients }) => {
           )}
           )}
       </List>
+      </div>
     )
   }
 }

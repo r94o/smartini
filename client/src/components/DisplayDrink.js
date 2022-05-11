@@ -33,6 +33,11 @@ const DrinkDisplay = ({ drink, searchedIngredients }) => {
              {drink.instructions}
             </Typography>
           </div>
+          <div id="glass-type">
+            <Typography>
+              Glass type: {drink.glass.displayName} 
+            </Typography>
+          </div>
           <div id="youtube-container">
            <YoutubeAPI drink={drink}/>
           </div>

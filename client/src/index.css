@@ -29,6 +29,19 @@ header {
   display: inline-flex;
 }
 
+.img-wrapper {
+  overflow: hidden;
+}
+
+.hover-zoom {
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.15);
+}
+
 #right-side-inner-container {
   width: 100%;
 }
@@ -60,5 +73,9 @@ header {
 }
 
 #instructions {
+  margin-top: 15px
+}
+
+#glass-type {
   margin-top: 15px
 }
