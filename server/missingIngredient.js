@@ -9,36 +9,38 @@ const db = mongoose.connection;
 const Drink = require('./models/drink');
 
 const removeSearchIngredients = (ingredients, searchIngredients) => {
-  // console.log("Cocktail:", ingredients);
-  // console.log("Search:", searchIngredients);
-  // console.log("Search Ingredients Contains:", searchIngredients);
   return ingredients.filter((ingredient) => !(searchIngredients.includes(ingredient)));
-  // console.log("Cocktail After Filter:", ingredients);
 };
 
 const missingIngredient = {
-  FilterByOneIngredientMissing: (req) => {
+  FilterByOneIngredientMissing: (req, res) => {
     const searchIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
-    console.log("Search Ingredients", searchIngredients)
     try {
-      Drink.find({ ingredientStrings: { $in: searchIngredients } }).lean()
+      Drink.find({ ingredientStrings: { $in: searchIngredients } })
+        .lean()
         .then((drinks) => {
           let pojoDrinks = drinks.map((drink) => {
             let returnObject = {};
-            // console.log(drink._id);
-            returnObject.id = drink._id;
-            // console.log(drink.ingredientStrings);
+            returnObject._id = drink._id;
             returnObject.ingredients = drink.ingredientStrings;
             return returnObject;
           })
-          // console.log(pojoDrinks);
 
           pojoDrinks.forEach((drink) => {
             drink.ingredients = removeSearchIngredients(drink.ingredients, searchIngredients);
             drink.ingredientsFilteredLength = drink.ingredients.length;
           })
-          console.log("Drinks", pojoDrinks);
-        });
+          const oneMissing = pojoDrinks.filter((drink) => drink.ingredientsFilteredLength == 1);
+          const oneMissingIds = oneMissing.map(drink => drink._id);
+
+          Drink.find({
+            '_id': {
+              $in: oneMissingIds
+            }
+          }).then((drinks) => {
+            res.send(drinks);
+          });
+        })
     } catch (e) {
       console.log("error");
     }
@@ -54,6 +56,12 @@ let req = {
   }
 }
 
-missingIngredient.FilterByOneIngredientMissing(req);
+const res = {
+  send: (input) => {
+    console.log(input)
+  }
+}
+
+missingIngredient.FilterByOneIngredientMissing(req, res);
 
 module.exports = missingIngredient;
