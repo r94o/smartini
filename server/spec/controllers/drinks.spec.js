@@ -106,19 +106,19 @@ describe('DrinksController', () => {
       });
     });
   });
-  describe('FilterByIngredient', () => {
+  describe('FilterByIngredients', () => {
     it('finds drinks based on search ingredients', async () => {
-      req.params = {
-        ingredient: encodeURI('an ingredient to be found'),
+      req.body = {
+        ingredients: ['several', 'ingredients', 'to', 'find'],
       };
       jest.spyOn(Drink, 'find').mockImplementation(() => {
-        return Promise.resolve(['Example Drink']);
+        return Promise.resolve(['Example Drink', ['Another Example Drink']]);
       });
-      DrinksController.FilterByIngredient(req, res);
+      DrinksController.FilterByIngredients(req, res);
       await waitForExpect(() => {
-        expect(Drink.find)
-          // .toBeCalledWith({ "$in": 'an ingredient to be found' });
-          .toBeCalled();
+        expect(Drink.find).toBeCalledWith({
+          $expr: { $setIsSubset: [['several', 'ingredients', 'to', 'find'], '$ingredients'] },
+        });
       });
     });
   });
