@@ -16,6 +16,10 @@ const IngredientSchema = new mongoose.Schema(
   },
 );
 
+IngredientSchema.virtual('namedId').get(function() {
+  return `${this.id} <${this.name}>`
+})
+
 const Ingredient = mongoose.model('Ingredient', IngredientSchema);
 
 module.exports = Ingredient;

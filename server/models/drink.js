@@ -21,6 +21,10 @@ const DrinkSchema = new mongoose.Schema(
   },
 );
 
+DrinkSchema.virtual('namedId').get(function() {
+  return this.ingredients
+})
+
 const Drink = mongoose.model('Drink', DrinkSchema);
 
 module.exports = Drink;
