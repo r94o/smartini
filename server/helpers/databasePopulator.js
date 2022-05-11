@@ -88,6 +88,7 @@ const populateDrinks = async (drinks) => {
         name: drink.name,
         displayName: drink.displayName,
         ingredients: ingredientsIds,
+        ingredientStrings: drink.ingredients,
         measures: drink.measures,
         name: drink.name,
         displayName: drink.displayName,

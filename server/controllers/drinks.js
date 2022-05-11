@@ -53,7 +53,7 @@ const DrinksController = {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
       Drink.find({
-        $expr: { $setIsSubset: ['$ingredients', queryIngredients] },
+        $expr: { $setIsSubset: ['$ingredientStrings', queryIngredients] },
       })
         .populate("glass")
         .then((drinks) => {
