@@ -5,23 +5,39 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useEffect, useState } from 'react'
 
-const MatchingDrinks = ({ ingredients, setDrink }) => {
+
+const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
 
   const [drinks, setDrinks] = useState([])
+  
 
   useEffect(() => {
-    fetch("http://localhost:3001/drinks", {
-      method: "POST",
-      body: JSON.stringify({
-        ingredients
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
+    if (ingredients.length) {
+      let apiURL = "http://localhost:3001/drinks"
+      if (matchingDrinksToggle) {
+        apiURL = "http://localhost:3001/drinks/ingredients"
+      } else {
+        setDrinks([])
       }
-    })
-      .then(response => response.json())
-      .then(({ drinks }) => setDrinks(drinks));
-  }, [ingredients]);
+      
+      fetch(apiURL, {
+        method: "POST",
+        body: JSON.stringify({
+          ingredients
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json())
+        .then(({ drinks }) => {
+          console.log("getting response");
+          setDrinks(drinks)});
+    } else {
+      console.log("this is emptying the setDrinks array")
+      setDrinks([])
+    }
+  }, [ingredients, matchingDrinksToggle]);
 
   const handleClick = (drinkIndex) => {
     setDrink(drinks[drinkIndex])
