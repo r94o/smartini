@@ -32,10 +32,13 @@ const MatchingDrinks = ({ ingredients, setDrink }) => {
       {drinks.map((drink, i) => (
         <Card sx={{ maxWidth: 150 }} className="matching-drink" key={i} onClick={() => handleClick(i)}>
           <CardActionArea >
+            <div className="img-wrapper">
             <CardMedia
               component="img"
               image={drink.image}
+              className="hover-zoom"
             />
+            </div>
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
                 {drink.displayName}
