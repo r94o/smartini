@@ -2,16 +2,22 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import { useEffect, useState } from "react";
+import Switch from '@mui/material/Switch';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 
-
-const IngredientSearch = ({ setIngredients }) => {
+const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
 
   const [allIngredients, setAllIngredients] = useState([])
 
   const handleChange = (event, value) => {
     const ingredientNames = value.map(value => value.name)
-    setIngredients(["Ice", "Salt", ...ingredientNames]);
+    setIngredients(ingredientNames);
+  }
+
+  const handleToggleChange = () => {
+    setMatchingDrinksToggle((previousState) => !previousState)
   }
 
   useEffect(() => {
@@ -36,6 +42,9 @@ const IngredientSearch = ({ setIngredients }) => {
           />
         )}
       />
+    <FormGroup>
+      <FormControlLabel control={<Switch />} label="Show all cocktails including the above" onChange={handleToggleChange} />
+    </FormGroup>
     </Stack>
   )
 }

@@ -9,10 +9,7 @@ function App() {
 
   const [ingredients, setIngredients] = useState([])
   const [drink, setDrink] = useState(null)
-
-  useEffect(() => {
-    setDrink(null);
-  },[ingredients])
+  const [matchingDrinksToggle, setMatchingDrinksToggle] = useState(false)
 
   return (
     <div>
@@ -20,18 +17,18 @@ function App() {
       <div id="main-container">
         <div id="left-side-inner-container">
           <div id="ingredient-search">
-            <IngredientSearch setIngredients={setIngredients} />
+            <IngredientSearch setIngredients={setIngredients} setMatchingDrinksToggle={setMatchingDrinksToggle} ingredients={ingredients} />
           </div>
           <div id="matching-drinks-container">
-            <MatchingDrinks ingredients={ingredients} setDrink={setDrink}/>
+            <MatchingDrinks ingredients={ingredients} setDrink={setDrink} matchingDrinksToggle={matchingDrinksToggle} />
           </div>
         </div>
         <div id="right-side-inner-container">
           <div id="drink-search">
-            <DrinkSearch setDrink={setDrink} />
+            <DrinkSearch setDrink={setDrink} matchingDrinksToggle={matchingDrinksToggle} />
           </div>
           <div id="display-drink-container">
-            <DisplayDrink drink={drink} />
+            <DisplayDrink drink={drink} searchedIngredients={ingredients} />
           </div>
           
         </div>

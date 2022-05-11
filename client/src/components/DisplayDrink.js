@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import DisplayIngredients from './DisplayIngredients';
 import YoutubeAPI from './YoutubeAPI'
 
-const DrinkDisplay = ({ drink }) => {
+const DrinkDisplay = ({ drink, searchedIngredients }) => {
   if (drink) {
     return (
 
@@ -25,18 +25,16 @@ const DrinkDisplay = ({ drink }) => {
             />
             </div>
             <div>
-            <DisplayIngredients drink={drink}/>
+            <DisplayIngredients drink={drink} searchedIngredients={searchedIngredients}/>
             </div>
           </div>
-          <div>
+          <div id="instructions">
             <Typography>
-              <br></br>
              {drink.instructions}
             </Typography>
           </div>
-          <div>
+          <div id="glass-type">
             <Typography>
-              <br></br>
               Glass type: {drink.glass.displayName} 
             </Typography>
           </div>

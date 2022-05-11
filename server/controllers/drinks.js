@@ -37,13 +37,15 @@ const DrinksController = {
       res.sendStatus(500);
     }
   },
-  FilterByIngredient: (req, res) => {
-    const searchIngredient = decodeURI(req.params.ingredient);
+  FilterByIngredients: (req, res) => {
+    const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
-      Drink.find({ ingredients: { $in: searchIngredient } })
+      Drink.find({
+        $expr: { $setIsSubset: [queryIngredients, '$ingredients'] },
+      })
         .populate("glass")
         .then((drinks) => {
-          res.send({ drinks });
+          res.json({ drinks });
         });
     } catch (e) {
       res.sendStatus(500);
@@ -64,7 +66,7 @@ const DrinksController = {
     }
   },
   FindVideoByName: (req, res) => {
-    const drinkName = encodeURI(req.params.name);
+    const drinkName = encodeURIComponent(req.params.name).replace("'", "%27");
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=how%20to%20make%20${drinkName}%20cocktail&type=video&key=${process.env.YOUTUBE_API_KEY}`)
     .then(response => response.json())
     .then(data => {
