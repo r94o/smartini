@@ -30,7 +30,14 @@ const DrinkDisplay = ({ drink }) => {
           </div>
           <div>
             <Typography>
+              <br></br>
              {drink.instructions}
+            </Typography>
+          </div>
+          <div>
+            <Typography>
+              <br></br>
+              Glass type: {drink.glass.displayName} 
             </Typography>
           </div>
           <div id="youtube-container">
