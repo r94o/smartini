@@ -20,6 +20,8 @@ header {
 #matching-drinks-container {
   margin-top: 15px;
   max-width: 350px;
+  height: 100vh;
+  overflow-y: overlay
 }
 
 .matching-drink {
@@ -50,5 +52,13 @@ header {
 }
 
 #youtube-container {
+  margin-top: 15px
+}
+
+.matching-drink > button > div {
+  min-height: 175px;
+}
+
+#instructions {
   margin-top: 15px
 }
