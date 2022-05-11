@@ -8,6 +8,7 @@ import LiquorIcon from '@mui/icons-material/Liquor';
 const DisplayIngredients = ({ drink }) => {
   if (drink) {
     return (
+      <div style={{textTransform: 'capitalize'}}>
       <List dense={true} disablePadding={true}>
         {drink.ingredients.map((ingredient, i) => (
       <ListItem>
@@ -18,6 +19,7 @@ const DisplayIngredients = ({ drink }) => {
       </ListItem>
         ))}
       </List>
+      </div>
     )
   }
 }
