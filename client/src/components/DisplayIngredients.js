@@ -9,7 +9,7 @@ const DisplayIngredients = ({ drink }) => {
   if (drink) {
     return (
       <List dense={true} disablePadding={true}>
-        {drink.ingredients.map((ingredient, i) => (
+        {drink.ingredientStrings.map((ingredient, i) => (
       <ListItem>
         <ListItemIcon>
           <LiquorIcon />
