@@ -3,4 +3,4 @@
 
 npm run build && mv -f build/* ../server/public
 
-cd ../server/public && rm -r static && cd ../../client && npm run build && mv -f build/* ../server/public
+cd ../server/public rm -r static && cd ../../client && npm run build && mv -f build/* ../server/public
