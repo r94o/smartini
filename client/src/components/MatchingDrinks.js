@@ -19,7 +19,8 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
       } else {
         setDrinks([])
       }
-      
+      console.log("this should be sending")
+      console.log(apiURL)
       fetch(apiURL, {
         method: "POST",
         body: JSON.stringify({
@@ -31,10 +32,8 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
       })
         .then(response => response.json())
         .then(({ drinks }) => {
-          console.log("getting response");
           setDrinks(drinks)});
     } else {
-      console.log("this is emptying the setDrinks array")
       setDrinks([])
     }
   }, [ingredients, matchingDrinksToggle]);
