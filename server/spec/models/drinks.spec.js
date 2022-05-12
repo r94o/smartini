@@ -5,18 +5,22 @@ const Drink = require('../../models/drink');
 
 describe('Drink model', () => {
   let mockGlassId;
+  let mockIngredient1Id;
+  let mockIngredient2Id;
   beforeEach((done) => {
     mongoose.connection.collections.drinks.drop(() => {
       Drink.syncIndexes(() => {
         done();
       });
       mockGlassId = new mongoose.Types.ObjectId();
+      mockIngredient1Id = new mongoose.Types.ObjectId();
+      mockIngredient2Id = new mongoose.Types.ObjectId();
     });
   });
 
   it('has a database name (lower case)', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -32,7 +36,7 @@ describe('Drink model', () => {
 
   it('has a display name (proper case)', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -48,7 +52,7 @@ describe('Drink model', () => {
 
   it('has a list of ingredients', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -59,12 +63,12 @@ describe('Drink model', () => {
       instructions: 'Mix together in washing machine',
       image: 'https://inreview52838412.files.wordpress.com/2020/02/e5107a_lg-e1581130075886.jpeg',
     });
-    expect(drink.ingredients).toEqual(['ingredient 1', 'ingredient 2']);
+    expect(drink.ingredients).toEqual([mockIngredient1Id, mockIngredient2Id]);
   });
 
   it('has a list of measures', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -80,7 +84,7 @@ describe('Drink model', () => {
 
   it('has a category', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -96,7 +100,7 @@ describe('Drink model', () => {
 
   it('has an IBA category', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -112,7 +116,7 @@ describe('Drink model', () => {
 
   it('has an alcoholic/unalcoholic tag', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -128,7 +132,7 @@ describe('Drink model', () => {
 
   it('has a glass category', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -144,7 +148,7 @@ describe('Drink model', () => {
 
   it('has instructions', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -160,7 +164,7 @@ describe('Drink model', () => {
 
   it('has an image URL', () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -176,7 +180,7 @@ describe('Drink model', () => {
 
   it('has name as a required field', async () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       displayName: 'Cocktail Shmocktail',
       category: 'booze',
@@ -191,7 +195,7 @@ describe('Drink model', () => {
 
   it('has display name as a required field', async () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       category: 'booze',
@@ -206,7 +210,7 @@ describe('Drink model', () => {
 
   it('has instructions as a required field', async () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -221,7 +225,7 @@ describe('Drink model', () => {
 
   it('name is a unique entry', async () => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -235,7 +239,7 @@ describe('Drink model', () => {
     await drink.save();
 
     const drinkCopy = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -259,7 +263,7 @@ describe('Drink model', () => {
 
   it('can retrieve a drink', (done) => {
     const drink = new Drink({
-      ingredients: ['ingredient 1', 'ingredient 2'],
+      ingredients: [mockIngredient1Id, mockIngredient2Id],
       measures: ['1 oz', '2 oz'],
       name: 'cocktail shmocktail',
       displayName: 'Cocktail Shmocktail',
@@ -278,7 +282,7 @@ describe('Drink model', () => {
         expect(err).toBeNull();
 
         expect(drinks[0]).toMatchObject({
-          ingredients: ['ingredient 1', 'ingredient 2'],
+          ingredients: [mockIngredient1Id, mockIngredient2Id],
           measures: ['1 oz', '2 oz'],
           name: 'cocktail shmocktail',
           displayName: 'Cocktail Shmocktail',
