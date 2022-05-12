@@ -9,6 +9,8 @@ html {
 body {
   font-family: futura-pt, sans-serif;
   color: #244c5a;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png");
+  background-size: 370px;
 }
 
 header {

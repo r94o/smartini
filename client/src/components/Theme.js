@@ -10,10 +10,14 @@ const Theme = createTheme({
       "san-serif"
     ].join(","),
   },
-  styleOverrides: {
-    root: {
-      color: "red",
-    }
+  components: {
+    IngredientSearch: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'black',
+        },
+      },
+    },
   },
 });
 

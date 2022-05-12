@@ -21,13 +21,12 @@ const IngredientSearch = ({ setIngredients }) => {
   useEffect(() => {
     fetch("http://localhost:3001/ingredients")
       .then(response => response.json())
-      .then(( {ingredients} ) => setAllIngredients(ingredients));
+      .then(({ ingredients }) => setAllIngredients(ingredients));
   }, []);
 
-
   return (
-    <Stack sx={{ width: 400 }}>
-    <Autocomplete
+    <Stack sx={{ backgroundColor: 'rgba(255, 255, 255, 0.6)', width: 400 }}>
+      <Autocomplete
         multiple
         id="tags-outlined"
         options={allIngredients}
