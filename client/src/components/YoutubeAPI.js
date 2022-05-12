@@ -20,7 +20,8 @@ const YoutubeAPI = ({drink}) => {
     .then(({ videoId }) => {
       setYoutubeData(videoId)
     });
-  }, [drink])
+  }, [drink.name])
+
 
   if (drink) {
     return (
