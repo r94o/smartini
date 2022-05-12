@@ -12,11 +12,18 @@ const removeSearchIngredients = (ingredients, searchIngredients) => {
   return ingredients.filter((ingredient) => !(searchIngredients.includes(ingredient)));
 };
 
+const onlyUnique = (value, index, self) => {
+  console.log(`value: ${value}, index ${index}, self ${self}`)
+  return self.indexOf(value) === index;
+};
+
 const missingIngredient = {
   FilterByOneIngredientMissing: (req, res) => {
     const searchIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
+    console.log(searchIngredients)
     try {
       Drink.find({ ingredientStrings: { $in: searchIngredients } })
+        // Drink.find()
         .lean()
         .then((drinks) => {
           let pojoDrinks = drinks.map((drink) => {
@@ -32,17 +39,48 @@ const missingIngredient = {
           })
           const oneMissing = pojoDrinks.filter((drink) => drink.ingredientsFilteredLength == 1);
           const oneMissingIds = oneMissing.map(drink => drink._id);
+          const oneMissingIngredients = oneMissing.map(drink => drink.ingredients[0]);
+          const oneMissingIngredientsDict = [];
+          oneMissingIngredients.forEach((ingredient) => {
+            let missingObject = {};
+            missingObject.name = ingredient;
+            missingObject.number = oneMissingIngredients.filter((value) => value === ingredient).length;
+            oneMissingIngredientsDict.push(missingObject);
+          });
+          const returnIngredients = {};
+          oneMissingIngredients.forEach((ingredient) => {
+            if (returnIngredients[ingredient]) {
+              returnIngredients[ingredient] += 1;
+            } else {
+              returnIngredients[ingredient] = 1;
+            }
+          })
+
+          const mappedReturnIngredients = [];
+          for (const [key, value] of Object.entries(returnIngredients)) {
+            mappedReturnIngredients.push(
+              {
+                name: key,
+                number: value
+              }
+            )
+          }
+
+          const sortedReturnIngredients = mappedReturnIngredients.sort((a, b) => a.number > b.number ? -1 : 1)
 
           Drink.find({
             '_id': {
               $in: oneMissingIds
             }
           }).then((drinks) => {
-            res.send(drinks);
+            res.send({
+              drinks: drinks,
+              ingredientsToBuy: sortedReturnIngredients
+            });
           });
         })
     } catch (e) {
-      console.log("error");
+      res.sendStatus(500);
     }
   }
 };
@@ -50,8 +88,11 @@ const missingIngredient = {
 let req = {
   body: {
     ingredients: [
-      "vodka",
-      "orange juice"
+      "grenadine",
+      "orange juice",
+      "cranberry juice",
+      "dry vermouth",
+      "olive"
     ]
   }
 }
@@ -59,7 +100,10 @@ let req = {
 const res = {
   send: (input) => {
     console.log(input)
-  }
+  },
+  sendStatus: (input) => {
+    console.log("Error:", input)
+  },
 }
 
 missingIngredient.FilterByOneIngredientMissing(req, res);

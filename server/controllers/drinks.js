@@ -88,13 +88,44 @@ const DrinksController = {
           })
           const oneMissing = pojoDrinks.filter((drink) => drink.ingredientsFilteredLength == 1);
           const oneMissingIds = oneMissing.map(drink => drink._id);
+          const oneMissingIngredients = oneMissing.map(drink => drink.ingredients[0]);
+          const oneMissingIngredientsDict = [];
+          oneMissingIngredients.forEach((ingredient) => {
+            let missingObject = {};
+            missingObject.name = ingredient;
+            missingObject.number = oneMissingIngredients.filter((value) => value === ingredient).length;
+            oneMissingIngredientsDict.push(missingObject);
+          });
+          const returnIngredients = {};
+          oneMissingIngredients.forEach((ingredient) => {
+            if (returnIngredients[ingredient]) {
+              returnIngredients[ingredient] += 1;
+            } else {
+              returnIngredients[ingredient] = 1;
+            }
+          })
+
+          const mappedReturnIngredients = [];
+          for (const [key, value] of Object.entries(returnIngredients)) {
+            mappedReturnIngredients.push(
+              {
+                name: key,
+                number: value
+              }
+            )
+          }
+
+          const sortedReturnIngredients = mappedReturnIngredients.sort((a, b) => a.number > b.number ? -1 : 1)
 
           Drink.find({
             '_id': {
               $in: oneMissingIds
             }
           }).then((drinks) => {
-            res.send(drinks);
+            res.send({
+              drinks: drinks,
+              ingredientsToBuy: sortedReturnIngredients
+            });
           });
         })
     } catch (e) {
