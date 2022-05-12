@@ -6,20 +6,14 @@ import { CardActionArea } from '@mui/material';
 import { useEffect, useState } from 'react'
 
 
-const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
 
-  const [drinks, setDrinks] = useState([])
+const MatchingDrinks = ({ ingredients, setDrink, filterValue, apiURL }) => {
+
+  const [drinks, setDrinks] = useState([]);
 
 
   useEffect(() => {
     if (ingredients.length) {
-      let apiURL = "http://localhost:3001/drinks"
-      if (matchingDrinksToggle) {
-        apiURL = "http://localhost:3001/drinks/ingredients"
-      } else {
-        setDrinks([])
-      }
-
       fetch(apiURL, {
         method: "POST",
         body: JSON.stringify({
@@ -31,14 +25,12 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
       })
         .then(response => response.json())
         .then(({ drinks }) => {
-          console.log("getting response");
           setDrinks(drinks)
         });
     } else {
-      console.log("this is emptying the setDrinks array")
       setDrinks([])
     }
-  }, [ingredients, matchingDrinksToggle]);
+  }, [ingredients, apiURL]);
 
   const handleClick = (drinkIndex) => {
     setDrink(drinks[drinkIndex])
@@ -46,6 +38,7 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
 
   return (
     <div>
+
       {drinks.map((drink, i) => (
         <Card sx={{ maxWidth: 150 }} className="matching-drink" key={i} onClick={() => handleClick(i)}>
           <CardActionArea >

@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import Switch from '@mui/material/Switch';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Typography from '@mui/material/Typography';
 
 
-const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
+const IngredientSearch = ({ setIngredients }) => {
 
   const [allIngredients, setAllIngredients] = useState([])
 
@@ -16,9 +17,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
     setIngredients(ingredientNames);
   }
 
-  const handleToggleChange = () => {
-    setMatchingDrinksToggle((previousState) => !previousState)
-  }
 
   useEffect(() => {
     fetch("http://localhost:3001/ingredients")
@@ -26,8 +24,9 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
       .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
 
+
   return (
-    <Stack sx={{ width: 350 }}>
+    <Stack sx={{ width: 400 }}>
     <Autocomplete
         multiple
         id="tags-outlined"
@@ -42,9 +41,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
           />
         )}
       />
-    <FormGroup>
-      <FormControlLabel control={<Switch />} label="Show all cocktails including the above" onChange={handleToggleChange} />
-    </FormGroup>
     </Stack>
   )
 }

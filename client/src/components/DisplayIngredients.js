@@ -8,6 +8,7 @@ import LiquorOutlinedIcon from '@mui/icons-material/LiquorOutlined';
 
 const DisplayIngredients = ({ drink, searchedIngredients }) => {
   if (drink) {
+    console.log(drink)
     return (
       <div style={{ textTransform: 'capitalize' }}>
         <List dense={true} disablePadding={true}>

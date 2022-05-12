@@ -140,6 +140,8 @@ const DrinksController = {
         if (data.items) {
           const videoId = data.items[0].id.videoId
           res.json({ videoId })
+        } else {
+          res.json({ videoId: ""})
         }
       });
   }
