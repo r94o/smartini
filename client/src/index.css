@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Sofia&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+@media only screen and (max-width: 768px) {
+  #main-container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+
 html {
   overflow-y: scroll;
 }
@@ -11,6 +19,7 @@ body {
   color: #244c5a;
   background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png");
   background-size: 370px;
+  overflow-x: hidden;
 }
 
 header {
@@ -19,6 +28,7 @@ header {
 
 #main-container {
   display: flex;
+  flex-wrap: nowrap;
   gap: 100px;
   margin: 15px 40px 0 40px
 }

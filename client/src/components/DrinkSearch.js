@@ -30,10 +30,15 @@ const DrinkSearch = ({ setDrink }) => {
         options={allDrinks}
         getOptionLabel={(option) => option.displayName}
         onChange={handleChange}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Search Drinks..." />}
+        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.4)', width: "300px" }}
+        renderInput={(params) => <TextField {...params} label="Search Drinks" />}
       />
-      <Button variant="outlined" onClick={handleClick}>Random Drink</Button>
+      <Button
+        variant="outlined"
+        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.4)' }}
+        onClick={handleClick}>
+        Random Drink
+      </Button>
     </>
   )
 }

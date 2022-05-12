@@ -10,12 +10,10 @@ const Header = () => {
       <AppBar position="static" sx={{ backgroundColor: "cadetBlue", m: 0 }}>
         <Toolbar>
           <IconButton size="large" edge="start">
-            <SmartiniLogo size="200px" />
-            <LiquorTwoToneIcon />
-            <WineBarTwoToneIcon />
+            <SmartiniLogo height="30px" />
           </IconButton>
           <Typography variant="h6" component="div">
-            Smartini
+            smartini
           </Typography>
         </Toolbar>
       </AppBar>

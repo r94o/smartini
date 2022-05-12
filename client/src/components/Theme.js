@@ -9,14 +9,8 @@ const Theme = createTheme({
       "Roboto",
       "san-serif"
     ].join(","),
-  },
-  components: {
-    IngredientSearch: {
-      styleOverrides: {
-        root: {
-          backgroundColor: 'black',
-        },
-      },
+    allVariants: {
+      color: "#244c5a"
     },
   },
 });
