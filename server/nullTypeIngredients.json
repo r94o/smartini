@@ -1,0 +1,1022 @@
+[
+  {
+    "name": "allspice",
+    "type": null
+  },
+  {
+    "name": "almond flavoring",
+    "type": null
+  },
+  {
+    "name": "almond",
+    "type": null
+  },
+  {
+    "name": "angelica root",
+    "type": null
+  },
+  {
+    "name": "anis",
+    "type": null
+  },
+  {
+    "name": "anise",
+    "type": null
+  },
+  {
+    "name": "anisette",
+    "type": null
+  },
+  {
+    "name": "apfelkorn",
+    "type": null
+  },
+  {
+    "name": "apple juice",
+    "type": null
+  },
+  {
+    "name": "apple",
+    "type": null
+  },
+  {
+    "name": "apricot nectar",
+    "type": null
+  },
+  {
+    "name": "apricot",
+    "type": null
+  },
+  {
+    "name": "aquavit",
+    "type": null
+  },
+  {
+    "name": "asafoetida",
+    "type": null
+  },
+  {
+    "name": "banana syrup",
+    "type": null
+  },
+  {
+    "name": "banana",
+    "type": null
+  },
+  {
+    "name": "barenjager",
+    "type": null
+  },
+  {
+    "name": "basil",
+    "type": null
+  },
+  {
+    "name": "beef stock",
+    "type": null
+  },
+  {
+    "name": "benedictine",
+    "type": null
+  },
+  {
+    "name": "berries",
+    "type": null
+  },
+  {
+    "name": "bitter lemon",
+    "type": null
+  },
+  {
+    "name": "bitters",
+    "type": null
+  },
+  {
+    "name": "black pepper",
+    "type": null
+  },
+  {
+    "name": "blackberries",
+    "type": null
+  },
+  {
+    "name": "blackcurrant cordial",
+    "type": null
+  },
+  {
+    "name": "blackcurrant squash",
+    "type": null
+  },
+  {
+    "name": "blue maui",
+    "type": null
+  },
+  {
+    "name": "blueberries",
+    "type": null
+  },
+  {
+    "name": "brown sugar",
+    "type": null
+  },
+  {
+    "name": "butter",
+    "type": null
+  },
+  {
+    "name": "calvados",
+    "type": null
+  },
+  {
+    "name": "campari",
+    "type": null
+  },
+  {
+    "name": "candy",
+    "type": null
+  },
+  {
+    "name": "cantaloupe",
+    "type": null
+  },
+  {
+    "name": "caramel coloring",
+    "type": null
+  },
+  {
+    "name": "carbonated soft drink",
+    "type": null
+  },
+  {
+    "name": "carbonated water",
+    "type": null
+  },
+  {
+    "name": "cardamom",
+    "type": null
+  },
+  {
+    "name": "cayenne pepper",
+    "type": null
+  },
+  {
+    "name": "celery salt",
+    "type": null
+  },
+  {
+    "name": "celery",
+    "type": null
+  },
+  {
+    "name": "cherries",
+    "type": null
+  },
+  {
+    "name": "cherry brandy",
+    "type": null
+  },
+  {
+    "name": "cherry cola",
+    "type": null
+  },
+  {
+    "name": "cherry grenadine",
+    "type": null
+  },
+  {
+    "name": "cherry heering",
+    "type": null
+  },
+  {
+    "name": "cherry juice",
+    "type": null
+  },
+  {
+    "name": "cherry",
+    "type": null
+  },
+  {
+    "name": "chocolate ice-cream",
+    "type": null
+  },
+  {
+    "name": "chocolate milk",
+    "type": null
+  },
+  {
+    "name": "chocolate syrup",
+    "type": null
+  },
+  {
+    "name": "chocolate",
+    "type": null
+  },
+  {
+    "name": "cinnamon",
+    "type": null
+  },
+  {
+    "name": "clamato juice",
+    "type": null
+  },
+  {
+    "name": "cloves",
+    "type": null
+  },
+  {
+    "name": "club soda",
+    "type": null
+  },
+  {
+    "name": "cocktail onion",
+    "type": null
+  },
+  {
+    "name": "cocoa powder",
+    "type": null
+  },
+  {
+    "name": "coconut cream",
+    "type": null
+  },
+  {
+    "name": "coconut milk",
+    "type": null
+  },
+  {
+    "name": "coconut syrup",
+    "type": null
+  },
+  {
+    "name": "cold water",
+    "type": null
+  },
+  {
+    "name": "condensed milk",
+    "type": null
+  },
+  {
+    "name": "coriander",
+    "type": null
+  },
+  {
+    "name": "corn syrup",
+    "type": null
+  },
+  {
+    "name": "cornstarch",
+    "type": null
+  },
+  {
+    "name": "cranberries",
+    "type": null
+  },
+  {
+    "name": "cream of coconut",
+    "type": null
+  },
+  {
+    "name": "cream soda",
+    "type": null
+  },
+  {
+    "name": "cream",
+    "type": null
+  },
+  {
+    "name": "creme de almond",
+    "type": null
+  },
+  {
+    "name": "creme de banane",
+    "type": null
+  },
+  {
+    "name": "creme de cacao",
+    "type": null
+  },
+  {
+    "name": "creme de noyaux",
+    "type": null
+  },
+  {
+    "name": "creme fraiche",
+    "type": null
+  },
+  {
+    "name": "crown royal",
+    "type": null
+  },
+  {
+    "name": "crystal light",
+    "type": null
+  },
+  {
+    "name": "cucumber",
+    "type": null
+  },
+  {
+    "name": "cumin powder",
+    "type": null
+  },
+  {
+    "name": "cumin seed",
+    "type": null
+  },
+  {
+    "name": "curacao",
+    "type": null
+  },
+  {
+    "name": "cynar",
+    "type": null
+  },
+  {
+    "name": "daiquiri mix",
+    "type": null
+  },
+  {
+    "name": "dark chocolate",
+    "type": null
+  },
+  {
+    "name": "dark creme de cacao",
+    "type": null
+  },
+  {
+    "name": "dark soy sauce",
+    "type": null
+  },
+  {
+    "name": "demerara sugar",
+    "type": null
+  },
+  {
+    "name": "dried oregano",
+    "type": null
+  },
+  {
+    "name": "dubonnet blanc",
+    "type": null
+  },
+  {
+    "name": "dubonnet rouge",
+    "type": null
+  },
+  {
+    "name": "egg white",
+    "type": null
+  },
+  {
+    "name": "egg yolk",
+    "type": null
+  },
+  {
+    "name": "egg",
+    "type": null
+  },
+  {
+    "name": "eggnog",
+    "type": null
+  },
+  {
+    "name": "erin cream",
+    "type": null
+  },
+  {
+    "name": "espresso",
+    "type": null
+  },
+  {
+    "name": "everclear",
+    "type": null
+  },
+  {
+    "name": "fanta",
+    "type": null
+  },
+  {
+    "name": "fennel seeds",
+    "type": null
+  },
+  {
+    "name": "firewater",
+    "type": null
+  },
+  {
+    "name": "flaked almonds",
+    "type": null
+  },
+  {
+    "name": "food coloring",
+    "type": null
+  },
+  {
+    "name": "forbidden fruit",
+    "type": null
+  },
+  {
+    "name": "frangelico",
+    "type": null
+  },
+  {
+    "name": "fresca",
+    "type": null
+  },
+  {
+    "name": "ginger",
+    "type": null
+  },
+  {
+    "name": "glycerine",
+    "type": null
+  },
+  {
+    "name": "grain alcohol",
+    "type": null
+  },
+  {
+    "name": "granulated sugar",
+    "type": null
+  },
+  {
+    "name": "grape juice",
+    "type": null
+  },
+  {
+    "name": "grape soda",
+    "type": null
+  },
+  {
+    "name": "grapefruit juice",
+    "type": null
+  },
+  {
+    "name": "grapes",
+    "type": null
+  },
+  {
+    "name": "green chartreuse",
+    "type": null
+  },
+  {
+    "name": "green ginger wine",
+    "type": null
+  },
+  {
+    "name": "green olives",
+    "type": null
+  },
+  {
+    "name": "ground ginger",
+    "type": null
+  },
+  {
+    "name": "guava juice",
+    "type": null
+  },
+  {
+    "name": "hawaiian punch",
+    "type": null
+  },
+  {
+    "name": "hazelnut liqueur",
+    "type": null
+  },
+  {
+    "name": "honey",
+    "type": null
+  },
+  {
+    "name": "hooch",
+    "type": null
+  },
+  {
+    "name": "hot chocolate",
+    "type": null
+  },
+  {
+    "name": "hot damn",
+    "type": null
+  },
+  {
+    "name": "hot sauce",
+    "type": null
+  },
+  {
+    "name": "hpnotiq",
+    "type": null
+  },
+  {
+    "name": "ice-cream",
+    "type": null
+  },
+  {
+    "name": "ice",
+    "type": null
+  },
+  {
+    "name": "iced tea",
+    "type": null
+  },
+  {
+    "name": "jello",
+    "type": null
+  },
+  {
+    "name": "jelly",
+    "type": null
+  },
+  {
+    "name": "kirschwasser",
+    "type": null
+  },
+  {
+    "name": "kiwi",
+    "type": null
+  },
+  {
+    "name": "kool-aid",
+    "type": null
+  },
+  {
+    "name": "kummel",
+    "type": null
+  },
+  {
+    "name": "lemon juice",
+    "type": null
+  },
+  {
+    "name": "lemon peel",
+    "type": null
+  },
+  {
+    "name": "lemon soda",
+    "type": null
+  },
+  {
+    "name": "lemon vodka",
+    "type": null
+  },
+  {
+    "name": "lemon-lime soda",
+    "type": null
+  },
+  {
+    "name": "lemon-lime",
+    "type": null
+  },
+  {
+    "name": "licorice root",
+    "type": null
+  },
+  {
+    "name": "light cream",
+    "type": null
+  },
+  {
+    "name": "lillet",
+    "type": null
+  },
+  {
+    "name": "lime juice cordial",
+    "type": null
+  },
+  {
+    "name": "lime juice",
+    "type": null
+  },
+  {
+    "name": "lime peel",
+    "type": null
+  },
+  {
+    "name": "limeade",
+    "type": null
+  },
+  {
+    "name": "madeira",
+    "type": null
+  },
+  {
+    "name": "mandarin",
+    "type": null
+  },
+  {
+    "name": "mandarine napoleon",
+    "type": null
+  },
+  {
+    "name": "mango",
+    "type": null
+  },
+  {
+    "name": "maple syrup",
+    "type": null
+  },
+  {
+    "name": "maraschino cherry juice",
+    "type": null
+  },
+  {
+    "name": "maraschino cherry",
+    "type": null
+  },
+  {
+    "name": "margarita mix",
+    "type": null
+  },
+  {
+    "name": "marjoram leaves",
+    "type": null
+  },
+  {
+    "name": "marshmallows",
+    "type": null
+  },
+  {
+    "name": "maui",
+    "type": null
+  },
+  {
+    "name": "melon vodka",
+    "type": null
+  },
+  {
+    "name": "mezcal",
+    "type": null
+  },
+  {
+    "name": "mint syrup",
+    "type": null
+  },
+  {
+    "name": "mountain dew",
+    "type": null
+  },
+  {
+    "name": "nutmeg",
+    "type": null
+  },
+  {
+    "name": "olive oil",
+    "type": null
+  },
+  {
+    "name": "olive",
+    "type": null
+  },
+  {
+    "name": "onion",
+    "type": null
+  },
+  {
+    "name": "orange bitters",
+    "type": null
+  },
+  {
+    "name": "orange juice",
+    "type": null
+  },
+  {
+    "name": "orange peel",
+    "type": null
+  },
+  {
+    "name": "orange soda",
+    "type": null
+  },
+  {
+    "name": "orange spiral",
+    "type": null
+  },
+  {
+    "name": "oreo cookie",
+    "type": null
+  },
+  {
+    "name": "oyster sauce",
+    "type": null
+  },
+  {
+    "name": "papaya juice",
+    "type": null
+  },
+  {
+    "name": "papaya",
+    "type": null
+  },
+  {
+    "name": "parfait amour",
+    "type": null
+  },
+  {
+    "name": "passion fruit juice",
+    "type": null
+  },
+  {
+    "name": "passion fruit syrup",
+    "type": null
+  },
+  {
+    "name": "peach juice",
+    "type": null
+  },
+  {
+    "name": "peach nectar",
+    "type": null
+  },
+  {
+    "name": "peanut oil",
+    "type": null
+  },
+  {
+    "name": "pepper",
+    "type": null
+  },
+  {
+    "name": "peppermint extract",
+    "type": null
+  },
+  {
+    "name": "pepsi cola",
+    "type": null
+  },
+  {
+    "name": "pernod",
+    "type": null
+  },
+  {
+    "name": "peychaud bitters",
+    "type": null
+  },
+  {
+    "name": "pina colada mix",
+    "type": null
+  },
+  {
+    "name": "pineapple juice",
+    "type": null
+  },
+  {
+    "name": "pineapple rum",
+    "type": null
+  },
+  {
+    "name": "pineapple vodka",
+    "type": null
+  },
+  {
+    "name": "pineapple-orange-banana juice",
+    "type": null
+  },
+  {
+    "name": "pink lemonade",
+    "type": null
+  },
+  {
+    "name": "pisang ambon",
+    "type": null
+  },
+  {
+    "name": "plain chocolate",
+    "type": null
+  },
+  {
+    "name": "plain flour",
+    "type": null
+  },
+  {
+    "name": "plums",
+    "type": null
+  },
+  {
+    "name": "powdered sugar",
+    "type": null
+  },
+  {
+    "name": "purple passion",
+    "type": null
+  },
+  {
+    "name": "raisins",
+    "type": null
+  },
+  {
+    "name": "raspberry cordial",
+    "type": null
+  },
+  {
+    "name": "raspberry jam",
+    "type": null
+  },
+  {
+    "name": "raspberry juice",
+    "type": null
+  },
+  {
+    "name": "raspberry syrup",
+    "type": null
+  },
+  {
+    "name": "red chile flakes",
+    "type": null
+  },
+  {
+    "name": "red chili flakes",
+    "type": null
+  },
+  {
+    "name": "red hot chili flakes",
+    "type": null
+  },
+  {
+    "name": "rhubarb",
+    "type": null
+  },
+  {
+    "name": "rock salt",
+    "type": null
+  },
+  {
+    "name": "roses sweetened lime juice",
+    "type": null
+  },
+  {
+    "name": "rosewater",
+    "type": null
+  },
+  {
+    "name": "rumple minze",
+    "type": null
+  },
+  {
+    "name": "sarsaparilla",
+    "type": null
+  },
+  {
+    "name": "schweppes lemon",
+    "type": null
+  },
+  {
+    "name": "schweppes russchian",
+    "type": null
+  },
+  {
+    "name": "sherbet",
+    "type": null
+  },
+  {
+    "name": "sirup of roses",
+    "type": null
+  },
+  {
+    "name": "soda water",
+    "type": null
+  },
+  {
+    "name": "sour apple pucker",
+    "type": null
+  },
+  {
+    "name": "soy milk",
+    "type": null
+  },
+  {
+    "name": "soy sauce",
+    "type": null
+  },
+  {
+    "name": "soya milk",
+    "type": null
+  },
+  {
+    "name": "soya sauce",
+    "type": null
+  },
+  {
+    "name": "spiced rum",
+    "type": null
+  },
+  {
+    "name": "sprite",
+    "type": null
+  },
+  {
+    "name": "squeezed orange",
+    "type": null
+  },
+  {
+    "name": "squirt",
+    "type": null
+  },
+  {
+    "name": "strawberry juice",
+    "type": null
+  },
+  {
+    "name": "strawberry syrup",
+    "type": null
+  },
+  {
+    "name": "sugar syrup",
+    "type": null
+  },
+  {
+    "name": "sugar",
+    "type": null
+  },
+  {
+    "name": "sunny delight",
+    "type": null
+  },
+  {
+    "name": "surge",
+    "type": null
+  },
+  {
+    "name": "swedish punsch",
+    "type": null
+  },
+  {
+    "name": "sweet cream",
+    "type": null
+  },
+  {
+    "name": "tabasco sauce",
+    "type": null
+  },
+  {
+    "name": "tang",
+    "type": null
+  },
+  {
+    "name": "tea",
+    "type": null
+  },
+  {
+    "name": "tequila rose",
+    "type": null
+  },
+  {
+    "name": "tia maria",
+    "type": null
+  },
+  {
+    "name": "tomato",
+    "type": null
+  },
+  {
+    "name": "tropicana",
+    "type": null
+  },
+  {
+    "name": "tuaca",
+    "type": null
+  },
+  {
+    "name": "vanilla extract",
+    "type": null
+  },
+  {
+    "name": "vanilla ice-cream",
+    "type": null
+  },
+  {
+    "name": "vanilla syrup",
+    "type": null
+  },
+  {
+    "name": "vanilla",
+    "type": null
+  },
+  {
+    "name": "vinegar",
+    "type": null
+  },
+  {
+    "name": "white chocolate liqueur",
+    "type": null
+  },
+  {
+    "name": "white creme de menthe",
+    "type": null
+  },
+  {
+    "name": "white grape juice",
+    "type": null
+  },
+  {
+    "name": "white vinegar",
+    "type": null
+  },
+  {
+    "name": "wormwood",
+    "type": null
+  },
+  {
+    "name": "yeast",
+    "type": null
+  }
+]

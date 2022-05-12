@@ -2,7 +2,7 @@
   {
     "displayName": "Coriander Seeds",
     "name": "coriander seeds",
-    "type": "Spice",
+    "type": "Coriander Seeds",
     "alcoholic": "No",
     "abv": null,
     "description": "Coriander is commonly found both as whole dried seeds and in ground form. Roasting or heating the seeds in a dry pan heightens the flavour, aroma, and pungency. Ground coriander seed loses flavour quickly in storage and is best ground fresh. Coriander seed is a spice in garam masala and Indian curries, which often employ the ground fruits in generous amounts together with cumin, acting as a thickener in a mixture called dhania jeera. Roasted coriander seeds, called dhania dal, are eaten as a snack.",
@@ -11,7 +11,7 @@
   {
     "displayName": "Coriander Leaves",
     "name": "coriander leaves",
-    "type": "Herb",
+    "type": "Coriander",
     "alcoholic": "No",
     "abv": null,
     "description": "Coriander is an annual herb in the family Apiaceae. It is also known as Chinese parsley, dhania, or cilantro (/sɪˈlæntroʊ, -ˈlɑːn-/).[2] All parts of the plant are edible, but the fresh leaves and the dried seeds (as a spice) are the parts most traditionally used in cooking. Most people perceive coriander as having a tart, lemon/lime taste, but to nearly a quarter of those surveyed, the leaves taste like dish soap, linked to a gene that detects some specific aldehydes that are also used as odorant substances in many soaps and detergents.",
