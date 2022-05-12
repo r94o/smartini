@@ -20,7 +20,7 @@ const IngredientSearch = ({ setIngredients }) => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3001/ingredients")
+    fetch("/ingredients")
       .then(response => response.json())
       .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
