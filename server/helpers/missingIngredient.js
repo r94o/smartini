@@ -6,7 +6,7 @@ const mongoDbUrl = process.env.MONGODB_URI || `mongodb://localhost/${mongoDb}`;
 mongoose.connect(mongoDbUrl);
 const db = mongoose.connection;
 
-const Drink = require('./models/drink');
+const Drink = require('../models/drink');
 
 const removeSearchIngredients = (ingredients, searchIngredients) => {
   return ingredients.filter((ingredient) => !(searchIngredients.includes(ingredient)));
