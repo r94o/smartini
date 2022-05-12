@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Switch from '@mui/material/Switch';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Typography from '@mui/material/Typography';
 
 
 const IngredientSearch = ({ setIngredients }) => {
@@ -22,6 +23,7 @@ const IngredientSearch = ({ setIngredients }) => {
       .then(response => response.json())
       .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
+
 
   return (
     <Stack sx={{ width: 400 }}>

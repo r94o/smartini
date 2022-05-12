@@ -14,7 +14,6 @@ const MatchingDrinks = ({ ingredients, setDrink, filterValue, apiURL }) => {
 
   useEffect(() => {
     if (ingredients.length) {
-  
       fetch(apiURL, {
         method: "POST",
         body: JSON.stringify({
