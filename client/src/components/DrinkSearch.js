@@ -2,8 +2,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-
 
 const DrinkSearch = ({ setDrink }) => {
 
@@ -21,8 +19,8 @@ const DrinkSearch = ({ setDrink }) => {
   useEffect(() => {
     fetch("http://localhost:3001/drinks/")
       .then(response => response.json())
-      .then(( {drinks} ) => setAllDrinks(drinks));
-      }, []);
+      .then(({ drinks }) => setAllDrinks(drinks));
+  }, []);
 
   return (
     <>

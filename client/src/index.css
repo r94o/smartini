@@ -3,8 +3,10 @@
 html {
   overflow-y: scroll;
 }
+
 body {
-  font-family: "Roboto";
+  font-family: futura-pt, sans-serif;
+  color: #244c5a;
 }
 
 header {
@@ -34,12 +36,12 @@ header {
 }
 
 .hover-zoom {
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
   width: 100%;
 }
 
 .hover-zoom:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 #right-side-inner-container {
@@ -68,7 +70,7 @@ header {
   margin-top: 15px
 }
 
-.matching-drink > button > div {
+.matching-drink>button>div {
   min-height: 175px;
 }
 

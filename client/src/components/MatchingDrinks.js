@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
 
   const [drinks, setDrinks] = useState([])
-  
+
 
   useEffect(() => {
     if (ingredients.length) {
@@ -19,7 +19,7 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
       } else {
         setDrinks([])
       }
-      
+
       fetch(apiURL, {
         method: "POST",
         body: JSON.stringify({
@@ -32,7 +32,8 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
         .then(response => response.json())
         .then(({ drinks }) => {
           console.log("getting response");
-          setDrinks(drinks)});
+          setDrinks(drinks)
+        });
     } else {
       console.log("this is emptying the setDrinks array")
       setDrinks([])
@@ -72,8 +73,3 @@ const MatchingDrinks = ({ ingredients, setDrink, matchingDrinksToggle }) => {
 }
 
 export default MatchingDrinks;
-
-
-
-
-
