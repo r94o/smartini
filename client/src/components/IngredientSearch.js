@@ -8,7 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
 
 
-const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
+const IngredientSearch = ({ setIngredients }) => {
 
   const [allIngredients, setAllIngredients] = useState([])
 
@@ -17,9 +17,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
     setIngredients(ingredientNames);
   }
 
-  const handleToggleChange = () => {
-    setMatchingDrinksToggle((previousState) => !previousState)
-  }
 
   useEffect(() => {
     fetch("http://localhost:3001/ingredients")
@@ -29,7 +26,7 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
 
 
   return (
-    <Stack sx={{ width: 350 }}>
+    <Stack sx={{ width: 400 }}>
     <Autocomplete
         multiple
         id="tags-outlined"
@@ -44,11 +41,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
           />
         )}
       />
-    
-    <FormGroup>
-      <FormControlLabel disableTypography sx={{fontSize: 12, margin: "0px auto 15px"}} control={<Switch size="small" />} label="Include partial matches" onChange={handleToggleChange} />
-    </FormGroup>
-    
     </Stack>
   )
 }

@@ -45,7 +45,7 @@ const DrinksController = {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
       Drink.find({
-        $expr: { $setIsSubset: [queryIngredients, '$ingredients'] },
+        $expr: { $setIsSubset: [queryIngredients, '$ingredientStrings'] },
       })
         .populate("glass")
         .then((drinks) => {
@@ -140,6 +140,8 @@ const DrinksController = {
         if (data.items) {
           const videoId = data.items[0].id.videoId
           res.json({ videoId })
+        } else {
+          res.json({ videoId: ""})
         }
       });
   }
