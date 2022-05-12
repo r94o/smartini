@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Sofia&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   #main-container {
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    gap: 50px;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  #right-side-inner-container {
+    align-items: center !important;
   }
 }
 
@@ -29,17 +34,28 @@ header {
 #main-container {
   display: flex;
   flex-wrap: nowrap;
-  gap: 100px;
-  margin: 15px 40px 0 40px
+  gap: 4rem;
+  margin: 15px 40px 0 40px;
+}
+
+#left-side-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right-side-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #matching-drinks-container {
-
   margin-top: 15px;
-  max-width: 400px;
-
-  height: 100vh;
-  overflow-y: overlay
+  max-width: 650px;
+  min-width: 380px;
+  height: 75vh;
+  overflow-y: overlay;
 }
 
 .matching-drink {

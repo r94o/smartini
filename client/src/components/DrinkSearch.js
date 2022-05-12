@@ -43,5 +43,4 @@ const DrinkSearch = ({ setDrink }) => {
   )
 }
 
-
 export default DrinkSearch;
