@@ -11,7 +11,7 @@ const DisplayIngredients = ({ drink, searchedIngredients }) => {
     return (
       <div style={{textTransform: 'capitalize'}}>
       <List dense={true} disablePadding={true}>
-        {drink.ingredients.map((ingredient, i) => {
+        {drink.ingredientStrings.map((ingredient, i) => {
           let icon = <LiquorOutlinedIcon sx={{ color: "#ababab" }} />
           let colour = "#ababab"
           let fontWeight = ""

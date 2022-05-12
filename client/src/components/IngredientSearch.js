@@ -7,7 +7,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
-const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
+const IngredientSearch = ({ setIngredients }) => {
 
   const [allIngredients, setAllIngredients] = useState([])
 
@@ -16,9 +16,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
     setIngredients(ingredientNames);
   }
 
-  const handleToggleChange = () => {
-    setMatchingDrinksToggle((previousState) => !previousState)
-  }
 
   useEffect(() => {
     fetch("http://localhost:3001/ingredients")
@@ -27,7 +24,7 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
   }, []);
 
   return (
-    <Stack sx={{ width: 350 }}>
+    <Stack sx={{ width: 400 }}>
     <Autocomplete
         multiple
         id="tags-outlined"
@@ -42,9 +39,6 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
           />
         )}
       />
-    <FormGroup>
-      <FormControlLabel control={<Switch />} label="Show all cocktails including the above" onChange={handleToggleChange} />
-    </FormGroup>
     </Stack>
   )
 }
