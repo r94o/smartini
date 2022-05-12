@@ -32,7 +32,7 @@ const insertManyDocuments = (model, documents) => {
   }
 }
 
-const populateIngredients = (ingredients) => {
+const populateIngredients = async (ingredients) => {
   const documents = [];
   ingredients.forEach((ingredient) => {
     try {
@@ -52,9 +52,10 @@ const populateIngredients = (ingredients) => {
     }
   });
   insertManyDocuments(Ingredient, documents);
+  console.log("Table:", ingredientsTable);
 }
 
-const populateGlasses = (glasses) => {
+const populateGlasses = async (glasses) => {
   const documents = [];
   glasses.forEach((glass) => {
     try {
@@ -72,16 +73,22 @@ const populateGlasses = (glasses) => {
   insertManyDocuments(Glass, documents);
 }
 
-const populateDrinks = (drinks) => {
+const populateDrinks = async (drinks) => {
   const documents = [];
   drinks.forEach((drink) => {
     const glassObjectId = retrieveObjectId(glassesTable, drink.glass);
+    const ingredientsIds = drink.ingredients.map((ingredient) => {
+      console.log(`Mapping ${ingredient} to objectID`);
+      return retrieveObjectId(ingredientsTable, ingredient);
+    });
+    console.log("Should be array of IDs", ingredientsIds)
     try {
       let document = new Drink({
         id: drink.id,
         name: drink.name,
         displayName: drink.displayName,
-        ingredients: drink.ingredients,
+        ingredients: ingredientsIds,
+        ingredientStrings: drink.ingredients,
         measures: drink.measures,
         name: drink.name,
         displayName: drink.displayName,
@@ -103,6 +110,7 @@ const populateDrinks = (drinks) => {
 const dropCollection = async (model) => {
   try {
     await model.collection.drop();
+    await model.syncIndexes();
   } catch (e) {
     if (e.code === 26) {
       console.log('namespace %s not found', model.collection.name)
@@ -114,34 +122,42 @@ const dropCollection = async (model) => {
 
 const updateIngredientsCollection = async () => {
   let ingredientsDB = db.collection('ingredients');
-  await ingredientsDB.countDocuments().then(async (count) => {
-    console.log("Current Ingredient Count:", count);
-    await dropCollection(Ingredient);
-  });
+  if (ingredientsDB.name != null) {
+    await ingredientsDB.countDocuments().then(async (count) => {
+      console.log("Current Ingredient Count:", count);
+      await dropCollection(Ingredient);
+    });
+  }
   const ingredients = require('../completeIngredients.json');
-  populateIngredients(ingredients);
+  const customIngredients = require('../customIngredients.json');
+  await populateIngredients(ingredients);
+  await populateIngredients(customIngredients);
 };
 
 const updateGlassesCollection = async () => {
   let glassesDB = db.collection('glasses');
-  await glassesDB.countDocuments().then(async (count) => {
-    console.log("Current Glass Count:", count);
-    await dropCollection(Glass);
-  });
+  if (glassesDB.name != null) {
+    await glassesDB.countDocuments().then(async (count) => {
+      console.log("Current Glass Count:", count);
+      await dropCollection(Glass);
+    });
+  }
   const glasses = require('../glasses.json');
-  populateGlasses(glasses);
+  await populateGlasses(glasses);
 };
 
 const updateDrinksCollection = async () => {
   let drinksDB = db.collection('drinks');
-  await drinksDB.countDocuments().then(async (count) => {
-    console.log("Current Drink Count:", count);
-    await dropCollection(Drink);
-  });
+  if (drinksDB.name != null) {
+    await drinksDB.countDocuments().then(async (count) => {
+      console.log("Current Drink Count:", count);
+      await dropCollection(Drink);
+    });
+  }
   const drinks = require('../drinks.json');
   const customDrinks = require('../customDrinks.json');
-  populateDrinks(drinks);
-  populateDrinks(customDrinks);
+  await populateDrinks(drinks);
+  await populateDrinks(customDrinks);
 }
 
 const populateDatabase = async (callback) => {

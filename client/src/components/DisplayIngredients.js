@@ -28,7 +28,7 @@ const DisplayIngredients = ({ drink, searchedIngredients }) => {
             <ListItemText primaryTypographyProps={{ color: colour, fontWeight: fontWeight }} primary={ingredient} secondary={drink.measures[i]}/>
             </ListItem>
           )}
-          )}
+        )}
       </List>
       </div>
     )

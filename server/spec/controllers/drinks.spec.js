@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const waitForExpect = require('wait-for-expect');
 
 const mongoDb = process.env.MONGODB_TARGET || 'cocktail_test';
-const mongoDbUrl = process.env.MONGODB_URI || `mongodb://localhost/${mongoDb}`;
+const mongoDbUrl = `mongodb://localhost/${mongoDb}`;
 
 const DrinksController = require('../../controllers/drinks');
 const Drink = require('../../models/drink');
@@ -133,7 +133,7 @@ describe('DrinksController', () => {
       DrinksController.FilterByAllIngredientsAvailable(req, res);
       await waitForExpect(() => {
         expect(Drink.find).toBeCalledWith({
-          $expr: { $setIsSubset: ['$ingredients', ['several', 'ingredients', 'to', 'find']] },
+          $expr: { $setIsSubset: ['$ingredientStrings', ['several', 'ingredients', 'to', 'find']] },
         });
       });
     });

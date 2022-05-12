@@ -31,7 +31,7 @@ const YoutubeAPI = ({drink}) => {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Youtube Video
+            YouTube Video
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>{drink.displayName} Cocktail - How to Make</Typography>
         </AccordionSummary>

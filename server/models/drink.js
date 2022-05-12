@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 const DrinkSchema = new mongoose.Schema(
   {
-    id: { type: String, unique: true },
-    ingredients: [{ type: String }],
-    measures: { type: Array },
+    ingredients: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Ingredient",
+    }],
+    ingredientStrings: [{ type: String }],
+    measures: [{ type: String }],
     name: { type: String, unique: true, required: true },
     displayName: { type: String, required: true },
     category: { type: String },
@@ -18,6 +21,10 @@ const DrinkSchema = new mongoose.Schema(
     image: { type: String },
   },
 );
+
+DrinkSchema.virtual('namedId').get(function() {
+  return this.ingredients
+})
 
 const Drink = mongoose.model('Drink', DrinkSchema);
 
