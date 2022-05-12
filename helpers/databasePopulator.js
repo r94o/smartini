@@ -12,6 +12,7 @@ const db = mongoose.connection;
 
 const ingredientsTable = {};
 const glassesTable = {};
+const ingredientTypeDict = require("../ingredientTypeDict")
 
 const retrieveObjectId = (table, name) => {
   let glassName = name.toLowerCase();
@@ -35,11 +36,12 @@ const insertManyDocuments = (model, documents) => {
 const populateIngredients = async (ingredients) => {
   const documents = [];
   ingredients.forEach((ingredient) => {
+    let ingredientType = ingredientTypeDict[ingredient.name];
     try {
       let document = new Ingredient({
         name: ingredient.name,
         displayName: ingredient.displayName,
-        type: ingredient.type,
+        type: ingredientType,
         alcoholic: ingredient.alcoholic,
         abv: ingredient.abv,
         description: ingredient.description,
@@ -89,6 +91,7 @@ const populateDrinks = async (drinks) => {
         displayName: drink.displayName,
         ingredients: ingredientsIds,
         ingredientStrings: drink.ingredients,
+        ingredientTypes: drink.types,
         measures: drink.measures,
         name: drink.name,
         displayName: drink.displayName,
