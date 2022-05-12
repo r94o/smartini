@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Switch from '@mui/material/Switch';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Typography from '@mui/material/Typography';
 
 
 const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
@@ -26,6 +27,7 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
       .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
 
+
   return (
     <Stack sx={{ width: 350 }}>
     <Autocomplete
@@ -42,9 +44,11 @@ const IngredientSearch = ({ setIngredients, setMatchingDrinksToggle }) => {
           />
         )}
       />
+    
     <FormGroup>
-      <FormControlLabel control={<Switch />} label="Show all cocktails including the above" onChange={handleToggleChange} />
+      <FormControlLabel disableTypography sx={{fontSize: 12, margin: "0px auto 15px"}} control={<Switch size="small" />} label="Include partial matches" onChange={handleToggleChange} />
     </FormGroup>
+    
     </Stack>
   )
 }
