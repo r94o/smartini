@@ -37,18 +37,13 @@ function App() {
             <div id="drink-search">
               <DrinkSearch setDrink={setDrink} matchingDrinksToggle={matchingDrinksToggle} />
             </div>
-            <div id="right-side-inner-container">
-              <div id="drink-search">
-                <DrinkSearch setDrink={setDrink} matchingDrinksToggle={matchingDrinksToggle} />
-              </div>
-              <div id="display-drink-container">
-                <DisplayDrink drink={drink} searchedIngredients={ingredients} />
-              </div>
+            <div id="display-drink-container">
+              <DisplayDrink drink={drink} searchedIngredients={ingredients} />
             </div>
           </div>
         </div>
       </div>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
