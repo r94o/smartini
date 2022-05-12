@@ -44,8 +44,9 @@ const DrinksController = {
   FilterByIngredients: (req, res) => {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
-      Drink.find({
-        "ingredientStrings": { $in: queryIngredients },
+      Drink.find({ $or:
+        [{"ingredientStrings": { $in: queryIngredients }},
+        {"ingredientTypes": { $in: queryIngredients }}]
       })
         .populate("glass")
         .then((drinks) => {

@@ -13,13 +13,14 @@ const IngredientSearch = ({ setIngredients }) => {
   const [allIngredients, setAllIngredients] = useState([])
 
   const handleChange = (event, value) => {
-    const ingredientNames = value.map(value => value.name)
-    setIngredients(ingredientNames);
+    const ingredientTypes = value.map(value => value.type);
+    const ingredientNames = value.map(value => value.name);
+    setIngredients([...new Set(["Ice", "Salt", ...ingredientNames, ...ingredientTypes])]);
   }
 
 
   useEffect(() => {
-    fetch("/ingredients")
+    fetch("http://localhost:3001/ingredients")
       .then(response => response.json())
       .then(( {ingredients} ) => setAllIngredients(ingredients));
   }, []);
