@@ -15,7 +15,7 @@ const YoutubeAPI = ({drink}) => {
   };
 
   useEffect(()=> {
-    fetch(`/drinks/video/${drink.name}`)
+    fetch(`http://localhost:3001/drinks/video/${drink.name}`)
     .then(response => response.json())
     .then(({ videoId }) => {
       setYoutubeData(videoId)

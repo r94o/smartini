@@ -7,19 +7,13 @@
     "test": "jest",
     "lint": "npx eslint --fix .",
     "populate": "node ./helpers/databasePopulator.js",
-    "both": "concurrently \"npm run start\" \"cd client && npm start\"",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "develop": "concurrently --kill-others-on-fail \"npm run start\" \"npm run heroku-start --prefix client\"",
-    "heroku-start": "concurrently --kill-others-on-fail \"npm run start\" \"npm run heroku-start --prefix client\""
+    "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.5",
     "debug": "~2.6.9",
-    "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "mongoose": "^6.3.2",
     "morgan": "~1.9.1",
@@ -29,6 +23,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.17.10",
     "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
