@@ -15,11 +15,11 @@ const IngredientSearch = ({ setIngredients }) => {
   const handleChange = (event, value) => {
     const ingredientTypes = value.map(value => value.type);
     const ingredientNames = value.map(value => value.name);
-    setIngredients([...new Set(["Ice", "Salt", ...ingredientNames, ...ingredientTypes])]);
+    setIngredients([...ingredientNames]);
   }
 
   useEffect(() => {
-    fetch("http://localhost:3001/ingredients")
+    fetch("/ingredients")
       .then(response => response.json())
       .then(({ ingredients }) => setAllIngredients(ingredients));
   }, []);

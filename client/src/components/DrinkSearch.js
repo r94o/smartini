@@ -17,7 +17,7 @@ const DrinkSearch = ({ setDrink }) => {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3001/drinks/")
+    fetch("/drinks/")
       .then(response => response.json())
       .then(({ drinks }) => setAllDrinks(drinks));
   }, []);

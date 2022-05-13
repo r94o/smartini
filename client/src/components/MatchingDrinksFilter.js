@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const MatchingDrinksFilter = ({ setApiURL, filterValue, setFilterValue }) => {
   const handleChange = (event, newValue) => {
-    const apiURLs = ["http://localhost:3001/drinks", "http://localhost:3001/drinks/missing/1", "http://localhost:3001/drinks/ingredients"]
+    const apiURLs = ["./drinks", "./drinks/missing/1", "./drinks/ingredients"]
     setFilterValue(newValue);
     setApiURL(apiURLs[newValue])
   };

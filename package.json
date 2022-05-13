@@ -7,7 +7,7 @@
     "test": "jest",
     "lint": "npx eslint --fix .",
     "populate": "node ./helpers/databasePopulator.js",
-    "both": "concurrently \"npm run start\" \"cd ../client && npm start\""
+    "both": "concurrently \"npm run start\" \"cd client && npm run start\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

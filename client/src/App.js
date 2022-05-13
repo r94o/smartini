@@ -10,11 +10,10 @@ import { ThemeProvider } from '@mui/material/styles';
 import Theme from './components/Theme.js'
 
 function App() {
-
   const [ingredients, setIngredients] = useState([])
   const [drink, setDrink] = useState(null)
   const [matchingDrinksToggle, setMatchingDrinksToggle] = useState(false)
-  const [apiURL, setApiURL] = useState("http://localhost:3001/drinks")
+  const [apiURL, setApiURL] = useState("/drinks")
   const [filterValue, setFilterValue] = useState(0);
 
   return (
