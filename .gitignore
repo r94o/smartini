@@ -1,5 +1,4 @@
-server/.env
-server/images/.DS_Store
+images/.DS_Store
 node_modules
 coverage
 .env
