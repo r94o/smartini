@@ -38,7 +38,7 @@ const DrinkDisplay = ({ drink, searchedIngredients }) => {
             </Typography>
           </div>
           <div id="youtube-container">
-            {/* <YoutubeAPI drink={drink}/> */}
+            <YoutubeAPI drink={drink}/>
           </div>
         </CardContent>
       </Card>
