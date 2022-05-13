@@ -6,7 +6,7 @@
   #main-container {
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 1rem !important;
     align-items: center;
   }
 
