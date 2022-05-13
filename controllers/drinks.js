@@ -44,10 +44,8 @@ const DrinksController = {
   FilterByIngredients: (req, res) => {
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
-      Drink.find({ $or:
-        [{"ingredientStrings": { $in: queryIngredients }},
-        {"ingredientTypes": { $in: queryIngredients }}]
-      })
+      Drink.find({
+        "ingredientStrings": { $in: queryIngredients }})
         .populate("glass")
         .then((drinks) => {
           res.json({ drinks });
@@ -57,6 +55,7 @@ const DrinksController = {
     }
   },
   FilterByAllIngredientsAvailable: (req, res) => {
+    console.log(req.body.ingredients)
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
       Drink.find({
