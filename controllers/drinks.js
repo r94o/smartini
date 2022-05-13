@@ -137,8 +137,12 @@ const DrinksController = {
       .then(response => response.json())
       .then(data => {
         if (data.items) {
-          const videoId = data.items[0].id.videoId
-          res.json({ videoId })
+          if (data.items.length) {
+            const videoId = data.items[0].id.videoId
+            res.json({ videoId })
+          } else {
+            res.json({ videoId: ""})
+          }
         } else {
           res.json({ videoId: ""})
         }
