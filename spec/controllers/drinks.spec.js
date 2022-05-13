@@ -117,7 +117,7 @@ describe('DrinksController', () => {
       DrinksController.FilterByIngredients(req, res);
       await waitForExpect(() => {
         expect(Drink.find).toBeCalledWith({
-          $expr: { $setIsSubset: [['several', 'ingredients', 'to', 'find'], '$ingredients'] },
+          $expr: { $setIsSubset: [['several', 'ingredients', 'to', 'find'], '$ingredientStrings'] },
         });
       });
     });

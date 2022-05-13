@@ -9,27 +9,28 @@ import LiquorOutlinedIcon from '@mui/icons-material/LiquorOutlined';
 const DisplayIngredients = ({ drink, searchedIngredients }) => {
   if (drink) {
     return (
-      <div style={{textTransform: 'capitalize'}}>
-      <List dense={true} disablePadding={true}>
-        {drink.ingredientStrings.map((ingredient, i) => {
-          let icon = <LiquorOutlinedIcon sx={{ color: "#ababab" }} />
-          let colour = "#ababab"
-          let fontWeight = ""
-          if (searchedIngredients.includes(ingredient)) {
-            icon = <LiquorIcon sx={{ color: "black" }} />
-            colour = "black"
-            fontWeight = "bold"
+      <div style={{ textTransform: 'capitalize' }}>
+        <List dense={true} disablePadding={true}>
+          {drink.ingredientStrings.map((ingredient, i) => {
+            let icon = <LiquorOutlinedIcon sx={{ color: "#ababab" }} />
+            let colour = "#ababab"
+            let fontWeight = ""
+            if (searchedIngredients.includes(ingredient)) {
+              icon = <LiquorIcon sx={{ color: "black" }} />
+              colour = "black"
+              fontWeight = "bold"
+            }
+            return (
+              <ListItem key={i}>
+                <ListItemIcon>
+                  {icon}
+                </ListItemIcon>
+                <ListItemText primaryTypographyProps={{ color: colour, fontWeight: fontWeight }} primary={ingredient} secondary={drink.measures[i]} />
+              </ListItem>
+            )
           }
-          return (
-            <ListItem key={i}>
-            <ListItemIcon>
-              {icon} 
-            </ListItemIcon>
-            <ListItemText primaryTypographyProps={{ color: colour, fontWeight: fontWeight }} primary={ingredient} secondary={drink.measures[i]}/>
-            </ListItem>
           )}
-        )}
-      </List>
+        </List>
       </div>
     )
   }

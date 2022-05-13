@@ -2,8 +2,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-
 
 const DrinkSearch = ({ setDrink }) => {
 
@@ -21,8 +19,8 @@ const DrinkSearch = ({ setDrink }) => {
   useEffect(() => {
     fetch("/drinks/")
       .then(response => response.json())
-      .then(( {drinks} ) => setAllDrinks(drinks));
-      }, []);
+      .then(({ drinks }) => setAllDrinks(drinks));
+  }, []);
 
   return (
     <>
@@ -32,13 +30,17 @@ const DrinkSearch = ({ setDrink }) => {
         options={allDrinks}
         getOptionLabel={(option) => option.displayName}
         onChange={handleChange}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Search Drinks..." />}
+        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.4)', width: "300px" }}
+        renderInput={(params) => <TextField {...params} label="Search Drinks" />}
       />
-      <Button variant="outlined" onClick={handleClick}>Random Drink</Button>
+      <Button
+        variant="outlined"
+        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.4)' }}
+        onClick={handleClick}>
+        Random Drink
+      </Button>
     </>
   )
 }
-
 
 export default DrinkSearch;
