@@ -55,7 +55,6 @@ const DrinksController = {
     }
   },
   FilterByAllIngredientsAvailable: (req, res) => {
-    console.log(req.body.ingredients)
     const queryIngredients = req.body.ingredients.map((ingredient) => ingredient.toLowerCase());
     try {
       Drink.find({

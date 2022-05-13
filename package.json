@@ -7,7 +7,12 @@
     "test": "jest",
     "lint": "npx eslint --fix .",
     "populate": "node ./helpers/databasePopulator.js",
-    "both": "concurrently \"npm run start\" \"cd client && npm run start\""
+    "both": "concurrently \"npm run start\" \"cd client && npm start\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "develop": "concurrently --kill-others-on-fail \"npm run start\" \"npm run heroku-start --prefix client\"",
+    "heroku-start": "concurrently --kill-others-on-fail \"npm run start\" \"npm run heroku-start --prefix client\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
